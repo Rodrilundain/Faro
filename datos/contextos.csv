@@ -1,0 +1,9 @@
+id_contexto,ambito,situacion,descripcion
+1,Aula,Clase regular,Registro tomado durante una jornada normal de clase.
+2,Aula,Evaluación o prueba,Registro asociado a instancias de examen o entrega.
+3,Recreo,Espacio social,Registro durante recreos o momentos de socialización.
+4,Educación física,Actividad deportiva,Registro durante deporte o actividades físicas grupales.
+5,Orientación,Entrevista con referente,"Registro tomado en instancia con adscripto, psicólogo o asistente social."
+6,Vínculos,Relaciones entre pares,Registro vinculado a la relación con compañeros y amistades.
+7,Hogar,Situación familiar reportada,Registro donde el estudiante refiere su situación en casa.
+8,Autopercepción,Estado general reportado,Registro de check-in de estado de ánimo general del día.

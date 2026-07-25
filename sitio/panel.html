@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FARO · Panel de riesgo</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo">🔦 FARO</span>
+  <span class="sub">Sistema de alerta temprana de bienestar estudiantil</span>
+  <nav>
+    <a href="index.html">Cargar datos</a>
+    <a href="panel.html" class="activo">Panel</a>
+  </nav>
+</header>
+
+<main>
+  <div class="aviso">⚠️ <strong>Herramienta de apoyo, no de diagnóstico.</strong>
+    FARO ayuda a <em>priorizar</em> a qué estudiantes acompañar primero. La evaluación y la
+    intervención son siempre decisión de un profesional (psicólogo / asistente social).</div>
+  <div class="ayuda"><strong>Líneas de ayuda (Uruguay):</strong>
+    Línea Vida (prevención del suicidio, MSP/ASSE): <strong>0800 0767 · *0767</strong>
+    &nbsp;·&nbsp; Emergencias: <strong>911</strong></div>
+
+  <div class="card">
+    <h1>Panel de riesgo</h1>
+    <p class="muted" id="fechaGen"></p>
+    <p class="muted" id="subtitulo"></p>
+    <div class="kpis" id="kpis"></div>
+  </div>
+
+  <div class="card">
+    <h2>Gráficos interactivos</h2>
+    <p class="muted">Tocá una barra o un punto para ver <strong>los datos que lo forman</strong>.</p>
+    <div class="graficos">
+      <div class="grafico"><h3>Estudiantes por nivel</h3>
+        <div class="hint">Clic en una barra → lista de esos estudiantes.</div><svg id="gNiveles"></svg></div>
+      <div class="grafico"><h3>Riesgo promedio por grupo</h3>
+        <div class="hint">Clic en un grupo → sus estudiantes.</div><svg id="gGrupos"></svg></div>
+      <div class="grafico"><h3>Top 10 por puntaje</h3>
+        <div class="hint">Clic en una barra → ficha del estudiante.</div><svg id="gTop"></svg></div>
+      <div class="grafico"><h3>Valencia vs. activación</h3>
+        <div class="hint">Cada punto es un estudiante. Clic → su ficha.</div><svg id="gDispersion"></svg></div>
+    </div>
+    <div id="detalle"></div>
+  </div>
+
+  <div class="card">
+    <div class="filtros">
+      <input type="search" id="buscar" placeholder="🔍 Buscar por nombre…">
+      <select id="filtroGrupo"><option value="">Todos los grupos</option></select>
+      <select id="filtroNivel">
+        <option value="">Todos los niveles</option>
+        <option>Rojo</option><option>Naranja</option><option>Amarillo</option>
+        <option>Verde</option><option>Sin datos suficientes</option>
+      </select>
+      <span class="muted" id="conteoVisible"></span>
+    </div>
+    <table id="tabla">
+      <thead><tr>
+        <th data-col="nivel_riesgo">Nivel</th><th data-col="puntaje_riesgo">Puntaje</th>
+        <th data-col="nombre">Estudiante</th><th data-col="grupo">Grupo</th>
+        <th data-col="valencia_prom_reciente">Valencia rec.</th>
+        <th data-col="prop_apagamiento">Apagamiento</th><th>Señal principal</th>
+      </tr></thead>
+      <tbody id="cuerpoTabla"></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>FARO · datos sintéticos de ejemplo · el uso real requiere consentimiento y marco institucional.</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="cabecera">
+      <span class="pill" id="mNivel"></span>
+      <strong id="mNombre" style="font-size:1.2rem"></strong>
+      <span class="muted" id="mMeta"></span>
+      <button class="cerrar" id="cerrar">×</button>
+    </div>
+    <div class="cuerpo">
+      <div class="metricas" id="mMetricas"></div>
+      <h2>Señales detectadas</h2>
+      <div id="mSenales"></div>
+      <h2 style="margin-top:18px">Evolución de la valencia</h2>
+      <svg class="spark" id="mSpark" viewBox="0 0 600 80" preserveAspectRatio="none"></svg>
+      <h2 style="margin-top:18px">Historial reciente</h2>
+      <div style="max-height:280px;overflow:auto">
+        <table><thead><tr><th>Fecha</th><th>Val.</th><th>Act.</th><th>Cuadrante</th>
+          <th>Etiqueta</th><th>Comentario</th></tr></thead><tbody id="mHistorial"></tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="faro_core.js"></script>
+<script src="datos_faro.js"></script>
+<script src="faro_ui.js"></script>
+<script>
+  var datos;
+  var guardado = sessionStorage.getItem("FARO_RESULTADO");
+  if (guardado) {
+    datos = JSON.parse(guardado);
+  } else {
+    // Sin carga previa: usar los datos de ejemplo embebidos.
+    datos = FARO.construirResultado(window.FARO_EJEMPLO_CSV, window.FARO_REF);
+    datos.origen = "datos de ejemplo";
+  }
+  FARO_UI.iniciarPanel(datos);
+</script>
+</body>
+</html>

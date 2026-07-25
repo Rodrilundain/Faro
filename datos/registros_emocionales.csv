@@ -1,0 +1,1057 @@
+id_registro,id_estudiante,id_contexto,fecha_hora,valencia,activacion,comentario
+1000,8,6,2026-05-02 08:15,-0.16,0.04,Sin mucho para decir.
+1001,28,5,2026-05-02 08:45,0.01,0.35,Me sentí con energía y participé en clase.
+1002,15,5,2026-05-02 09:00,0.23,0.25,Normal.
+1003,6,8,2026-05-02 11:45,0.37,0.21,Me gustó la actividad de hoy.
+1004,20,5,2026-05-02 12:15,0.66,0.29,Me sentí con energía y participé en clase.
+1005,8,2,2026-05-02 13:30,-0.13,-0.05,Sin mucho para decir.
+1006,6,6,2026-05-02 15:00,-0.02,0.07,Normal.
+1007,5,1,2026-05-02 15:15,0.49,0.14,Me gustó la actividad de hoy.
+1008,16,5,2026-05-02 15:15,0.2,-0.05,Normal.
+1009,25,2,2026-05-02 15:15,0.47,0.02,Me gustó la actividad de hoy.
+1010,4,7,2026-05-02 15:30,-0.23,0.25,Sin mucho para decir.
+1011,26,7,2026-05-02 15:30,0.09,0.3,Me gustó la actividad de hoy.
+1012,19,2,2026-05-02 16:00,0.2,0.39,"Buen día, trabajé cómodo con el grupo."
+1013,2,4,2026-05-02 17:15,0.1,0.13,"Día común, ni bien ni mal."
+1014,11,3,2026-05-02 17:15,0.28,-0.14,Normal.
+1015,2,6,2026-05-03 09:00,0.38,0.18,Me sentí con energía y participé en clase.
+1016,30,4,2026-05-03 09:30,0.38,-0.1,"Día normal, bastante calmado."
+1017,1,2,2026-05-03 10:00,0.27,0.08,Normal.
+1018,1,4,2026-05-03 11:00,0.05,0.08,Normal.
+1019,3,6,2026-05-03 12:30,-0.36,0.42,Discutí con un compañero y quedé alterado.
+1020,23,7,2026-05-03 12:45,0.49,-0.11,"Día normal, bastante calmado."
+1021,16,4,2026-05-03 13:00,0.23,-0.3,"Día normal, bastante calmado."
+1022,14,3,2026-05-03 13:30,0.6,0.69,Me gustó la actividad de hoy.
+1023,4,8,2026-05-03 13:45,0.13,0.18,Sin mucho para decir.
+1024,17,5,2026-05-03 14:00,0.16,-0.02,Normal.
+1025,22,6,2026-05-03 14:30,-0.18,-0.11,Sin mucho para decir.
+1026,9,1,2026-05-03 14:45,0.73,0.11,"Buen día, trabajé cómodo con el grupo."
+1027,7,6,2026-05-03 15:00,0.77,0.32,Me gustó la actividad de hoy.
+1028,22,6,2026-05-03 16:45,-0.08,0.4,Me frustré porque no me salían las cosas.
+1029,20,8,2026-05-04 09:15,0.21,0.53,"Buen día, trabajé cómodo con el grupo."
+1030,26,2,2026-05-04 12:15,0.41,-0.17,"Día normal, bastante calmado."
+1031,6,7,2026-05-04 12:45,-0.03,0.03,Sin mucho para decir.
+1032,25,3,2026-05-04 13:45,0.69,0.65,Me gustó la actividad de hoy.
+1033,13,5,2026-05-04 14:00,0.56,0.42,"Buen día, trabajé cómodo con el grupo."
+1034,15,8,2026-05-04 14:45,0.72,0.1,Me sentí con energía y participé en clase.
+1035,30,7,2026-05-05 09:15,0.17,0.32,Me gustó la actividad de hoy.
+1036,27,8,2026-05-05 10:00,0.51,0.1,Me sentí con energía y participé en clase.
+1037,3,2,2026-05-05 10:15,0.39,0.31,"Buen día, trabajé cómodo con el grupo."
+1038,27,3,2026-05-05 11:00,0.37,0.13,Me sentí con energía y participé en clase.
+1039,2,8,2026-05-05 11:15,-0.08,0.03,"Día común, ni bien ni mal."
+1040,12,5,2026-05-05 11:15,0.44,0.35,Me sentí con energía y participé en clase.
+1041,9,1,2026-05-05 12:30,0.57,0.23,Me gustó la actividad de hoy.
+1042,18,1,2026-05-05 12:30,0.56,-0.22,Me sentí en paz durante la jornada.
+1043,29,2,2026-05-05 14:15,0.6,0.6,Me sentí con energía y participé en clase.
+1044,13,2,2026-05-05 15:15,0.5,0.25,"Buen día, trabajé cómodo con el grupo."
+1045,30,3,2026-05-05 15:30,-0.22,-0.01,Sin mucho para decir.
+1046,19,7,2026-05-06 08:45,0.24,0.02,Sin mucho para decir.
+1047,5,8,2026-05-06 09:00,0.73,0.45,"Buen día, trabajé cómodo con el grupo."
+1048,7,2,2026-05-06 10:00,0.27,0.26,Sin mucho para decir.
+1049,8,6,2026-05-06 10:30,-0.02,0.03,"Día común, ni bien ni mal."
+1050,12,6,2026-05-06 10:45,0.53,0.21,Me gustó la actividad de hoy.
+1051,18,6,2026-05-06 11:00,0.12,0.36,"Buen día, trabajé cómodo con el grupo."
+1052,16,4,2026-05-06 11:30,0.44,0.13,Me gustó la actividad de hoy.
+1053,5,1,2026-05-06 12:45,0.52,-0.0,Me sentí con energía y participé en clase.
+1054,23,7,2026-05-06 14:00,0.55,0.26,Me gustó la actividad de hoy.
+1055,21,4,2026-05-06 14:45,0.32,0.48,Me sentí con energía y participé en clase.
+1056,3,8,2026-05-06 15:15,0.51,-0.05,"Día normal, bastante calmado."
+1057,10,2,2026-05-07 08:15,-0.08,0.22,Sin mucho para decir.
+1058,22,1,2026-05-07 08:30,-0.16,0.32,Discutí con un compañero y quedé alterado.
+1059,24,4,2026-05-07 11:00,0.16,0.49,Me gustó la actividad de hoy.
+1060,20,6,2026-05-07 11:15,0.5,0.39,"Buen día, trabajé cómodo con el grupo."
+1061,24,7,2026-05-07 11:45,-0.08,0.34,Me puse nervioso con la prueba.
+1062,3,4,2026-05-07 12:45,0.18,0.49,"Buen día, trabajé cómodo con el grupo."
+1063,16,3,2026-05-07 13:30,-0.28,-0.03,Normal.
+1064,2,8,2026-05-07 13:45,-0.17,0.71,Me puse nervioso con la prueba.
+1065,28,3,2026-05-07 14:15,0.42,0.23,"Buen día, trabajé cómodo con el grupo."
+1066,12,2,2026-05-07 15:00,0.45,0.29,Me sentí con energía y participé en clase.
+1067,11,8,2026-05-07 15:15,0.19,0.02,Sin mucho para decir.
+1068,25,4,2026-05-07 15:45,0.26,0.39,Me sentí con energía y participé en clase.
+1069,29,8,2026-05-07 15:45,0.5,0.3,"Buen día, trabajé cómodo con el grupo."
+1070,10,7,2026-05-08 08:00,-0.15,-0.31,Me cuesta todo últimamente.
+1071,18,6,2026-05-08 08:00,-0.18,0.09,Sin mucho para decir.
+1072,28,8,2026-05-08 09:45,-0.29,0.1,"Día común, ni bien ni mal."
+1073,12,5,2026-05-08 11:45,0.07,0.63,"Buen día, trabajé cómodo con el grupo."
+1074,21,1,2026-05-08 12:15,0.36,0.64,Me gustó la actividad de hoy.
+1075,8,8,2026-05-08 12:30,-0.14,0.24,Normal.
+1076,22,7,2026-05-08 13:45,-1.0,-0.2,"Preferí estar solo, no quería hablar."
+1077,25,8,2026-05-08 13:45,0.59,0.27,Me sentí con energía y participé en clase.
+1078,4,8,2026-05-08 14:00,0.1,0.27,Sin mucho para decir.
+1079,17,8,2026-05-08 14:15,0.08,0.05,"Día común, ni bien ni mal."
+1080,21,5,2026-05-08 14:15,0.39,0.1,Me sentí con energía y participé en clase.
+1081,11,3,2026-05-08 14:45,0.22,0.0,Normal.
+1082,4,8,2026-05-08 16:00,0.05,-0.13,"Día común, ni bien ni mal."
+1083,29,2,2026-05-08 16:30,0.5,0.55,Me gustó la actividad de hoy.
+1084,18,8,2026-05-08 16:45,0.19,-0.14,"Día común, ni bien ni mal."
+1085,6,6,2026-05-08 17:15,0.29,-0.1,Normal.
+1086,14,2,2026-05-08 17:15,0.34,0.5,"Buen día, trabajé cómodo con el grupo."
+1087,30,7,2026-05-08 17:30,-0.29,-0.05,Sin mucho para decir.
+1088,13,4,2026-05-09 08:00,0.71,0.54,Me sentí con energía y participé en clase.
+1089,30,8,2026-05-09 09:45,0.13,0.12,"Día común, ni bien ni mal."
+1090,2,4,2026-05-09 11:15,0.05,-0.34,Me sentí en paz durante la jornada.
+1091,12,2,2026-05-09 11:45,0.29,0.12,"Día común, ni bien ni mal."
+1092,22,4,2026-05-09 12:15,0.73,0.8,"Buen día, trabajé cómodo con el grupo."
+1093,12,2,2026-05-09 13:30,0.71,0.09,"Buen día, trabajé cómodo con el grupo."
+1094,25,6,2026-05-09 14:00,0.38,0.29,Me gustó la actividad de hoy.
+1095,12,4,2026-05-09 14:30,0.32,0.13,"Buen día, trabajé cómodo con el grupo."
+1096,28,1,2026-05-09 14:30,-0.19,-0.27,Sin mucho para decir.
+1097,27,7,2026-05-09 17:30,0.56,0.35,Me gustó la actividad de hoy.
+1098,8,6,2026-05-10 08:45,-0.21,-0.1,Sin mucho para decir.
+1099,15,5,2026-05-10 08:45,0.57,0.25,"Buen día, trabajé cómodo con el grupo."
+1100,2,7,2026-05-10 09:00,0.19,-0.34,"Día normal, bastante calmado."
+1101,5,5,2026-05-10 09:15,0.58,0.26,Me gustó la actividad de hoy.
+1102,4,1,2026-05-10 10:30,0.43,-0.03,Me sentí en paz durante la jornada.
+1103,29,7,2026-05-10 11:15,0.22,0.4,"Buen día, trabajé cómodo con el grupo."
+1104,1,2,2026-05-10 11:30,0.04,-0.14,"Día común, ni bien ni mal."
+1105,16,8,2026-05-10 13:45,0.19,-0.04,"Día común, ni bien ni mal."
+1106,23,1,2026-05-10 14:30,0.47,0.2,Me gustó la actividad de hoy.
+1107,11,2,2026-05-10 14:45,0.05,0.2,Sin mucho para decir.
+1108,17,1,2026-05-10 15:00,-0.31,-0.53,Me cuesta todo últimamente.
+1109,1,1,2026-05-10 15:30,-0.06,-0.17,"Día común, ni bien ni mal."
+1110,26,3,2026-05-10 17:45,-0.14,0.14,Normal.
+1111,26,5,2026-05-11 08:30,0.14,-0.16,"Día común, ni bien ni mal."
+1112,20,2,2026-05-11 10:00,0.62,0.06,Me sentí con energía y participé en clase.
+1113,20,8,2026-05-11 10:15,0.22,0.65,Me gustó la actividad de hoy.
+1114,14,1,2026-05-11 12:00,0.35,0.77,Me sentí con energía y participé en clase.
+1115,24,1,2026-05-11 12:30,0.19,0.61,Me sentí con energía y participé en clase.
+1116,6,3,2026-05-11 12:45,-0.01,-0.01,Normal.
+1117,22,4,2026-05-11 13:15,-0.01,0.25,Sin mucho para decir.
+1118,5,8,2026-05-11 14:30,0.3,0.18,Me gustó la actividad de hoy.
+1119,2,2,2026-05-11 15:15,-0.12,0.12,Sin mucho para decir.
+1120,4,2,2026-05-11 15:45,0.09,0.16,"Día común, ni bien ni mal."
+1121,18,2,2026-05-11 16:00,0.01,0.36,Me sentí con energía y participé en clase.
+1122,10,1,2026-05-11 17:00,0.28,-0.21,"Día común, ni bien ni mal."
+1123,6,6,2026-05-11 17:15,-0.1,-0.03,"Día común, ni bien ni mal."
+1124,12,6,2026-05-12 08:00,0.27,0.23,"Día común, ni bien ni mal."
+1125,16,8,2026-05-12 08:00,-0.02,0.46,Me puse nervioso con la prueba.
+1126,17,8,2026-05-12 08:00,-0.05,-0.2,Sin mucho para decir.
+1127,3,7,2026-05-12 08:15,-0.2,0.46,Me frustré porque no me salían las cosas.
+1128,30,7,2026-05-12 08:15,-0.06,-0.49,"Preferí estar solo, no quería hablar."
+1129,5,8,2026-05-12 09:45,0.8,0.35,Me sentí con energía y participé en clase.
+1130,28,8,2026-05-12 10:30,0.16,-0.39,Me sentí en paz durante la jornada.
+1131,21,3,2026-05-12 11:00,0.44,0.02,Me sentí con energía y participé en clase.
+1132,30,1,2026-05-12 11:15,0.08,-0.01,"Día común, ni bien ni mal."
+1133,19,7,2026-05-12 11:45,0.65,0.15,"Buen día, trabajé cómodo con el grupo."
+1134,29,3,2026-05-12 12:45,0.45,0.27,Me gustó la actividad de hoy.
+1135,16,5,2026-05-12 13:30,0.17,0.49,Me gustó la actividad de hoy.
+1136,3,3,2026-05-12 13:45,0.14,0.63,"Buen día, trabajé cómodo con el grupo."
+1137,25,6,2026-05-12 14:00,0.29,0.19,"Día común, ni bien ni mal."
+1138,3,8,2026-05-12 14:15,0.5,0.09,Me sentí con energía y participé en clase.
+1139,25,5,2026-05-12 15:15,0.53,0.39,"Buen día, trabajé cómodo con el grupo."
+1140,16,7,2026-05-12 16:30,-0.34,0.05,Me puse nervioso con la prueba.
+1141,7,7,2026-05-12 16:45,0.22,0.52,Me gustó la actividad de hoy.
+1142,11,1,2026-05-12 16:45,0.38,0.01,"Buen día, trabajé cómodo con el grupo."
+1143,22,2,2026-05-12 17:15,0.26,0.05,Normal.
+1144,18,4,2026-05-13 08:00,0.47,-0.02,Me sentí en paz durante la jornada.
+1145,11,4,2026-05-13 09:00,-0.02,-0.39,"Preferí estar solo, no quería hablar."
+1146,8,8,2026-05-13 11:00,0.18,-0.32,"Tranquilo, sin novedades."
+1147,30,1,2026-05-13 12:30,-0.1,0.12,"Día común, ni bien ni mal."
+1148,6,3,2026-05-13 14:30,0.08,-0.04,Normal.
+1149,10,1,2026-05-13 15:30,0.21,0.48,Me sentí con energía y participé en clase.
+1150,21,8,2026-05-13 15:30,0.39,0.6,Me sentí con energía y participé en clase.
+1151,4,1,2026-05-13 15:45,0.38,0.13,Me sentí con energía y participé en clase.
+1152,25,7,2026-05-13 15:45,0.26,0.09,"Día común, ni bien ni mal."
+1153,15,1,2026-05-13 17:45,0.54,0.51,"Buen día, trabajé cómodo con el grupo."
+1154,2,1,2026-05-14 08:00,-0.12,0.16,Sin mucho para decir.
+1155,3,8,2026-05-14 08:45,0.62,-0.08,"Tranquilo, sin novedades."
+1156,8,5,2026-05-14 08:45,-0.24,-0.15,Normal.
+1157,13,2,2026-05-14 09:30,0.51,0.52,Me sentí con energía y participé en clase.
+1158,7,8,2026-05-14 09:45,0.88,0.57,Me gustó la actividad de hoy.
+1159,27,3,2026-05-14 10:15,0.56,0.06,Me gustó la actividad de hoy.
+1160,22,2,2026-05-14 12:15,0.9,0.3,Me sentí con energía y participé en clase.
+1161,6,6,2026-05-14 13:00,0.07,-0.02,"Día común, ni bien ni mal."
+1162,14,1,2026-05-14 13:45,0.32,0.09,"Buen día, trabajé cómodo con el grupo."
+1163,18,4,2026-05-14 14:00,-0.0,-0.06,Normal.
+1164,18,3,2026-05-14 14:00,0.31,-0.35,"Tranquilo, sin novedades."
+1165,24,3,2026-05-14 17:00,0.19,0.04,"Día común, ni bien ni mal."
+1166,28,8,2026-05-14 17:00,-0.03,-0.37,Me cuesta todo últimamente.
+1167,4,2,2026-05-15 09:45,-0.04,0.12,Normal.
+1168,20,4,2026-05-15 12:15,0.54,0.63,Me sentí con energía y participé en clase.
+1169,29,8,2026-05-15 12:30,0.4,0.33,Me gustó la actividad de hoy.
+1170,8,4,2026-05-15 14:15,-0.25,-0.0,"Día común, ni bien ni mal."
+1171,23,2,2026-05-15 15:00,0.35,0.34,Me sentí con energía y participé en clase.
+1172,9,7,2026-05-15 16:30,0.58,0.11,"Buen día, trabajé cómodo con el grupo."
+1173,9,4,2026-05-15 16:45,0.4,0.4,Me sentí con energía y participé en clase.
+1174,19,7,2026-05-15 17:00,0.2,0.19,"Día común, ni bien ni mal."
+1175,21,5,2026-05-15 17:30,0.33,0.41,Me gustó la actividad de hoy.
+1176,2,2,2026-05-16 08:00,0.25,-0.35,"Tranquilo, sin novedades."
+1177,22,6,2026-05-16 08:30,0.14,-0.29,Sin mucho para decir.
+1178,16,5,2026-05-16 08:45,0.29,0.03,"Día común, ni bien ni mal."
+1179,18,3,2026-05-16 09:00,-0.09,0.1,Sin mucho para decir.
+1180,26,8,2026-05-16 09:30,0.08,-0.05,"Día común, ni bien ni mal."
+1181,13,7,2026-05-16 10:45,0.76,0.65,"Buen día, trabajé cómodo con el grupo."
+1182,12,5,2026-05-16 13:30,0.73,0.52,Me sentí con energía y participé en clase.
+1183,28,3,2026-05-16 13:30,-0.08,0.22,Normal.
+1184,18,1,2026-05-16 14:00,-0.06,-0.12,Normal.
+1185,30,6,2026-05-16 14:45,0.29,-0.19,Sin mucho para decir.
+1186,25,5,2026-05-16 15:15,0.32,0.26,"Buen día, trabajé cómodo con el grupo."
+1187,28,1,2026-05-16 16:30,0.36,-0.19,"Tranquilo, sin novedades."
+1188,29,5,2026-05-17 08:00,0.18,0.36,"Buen día, trabajé cómodo con el grupo."
+1189,27,3,2026-05-17 10:00,0.42,0.55,Me gustó la actividad de hoy.
+1190,6,8,2026-05-17 10:15,0.25,0.21,"Día común, ni bien ni mal."
+1191,15,8,2026-05-17 10:30,0.26,-0.09,Sin mucho para decir.
+1192,9,6,2026-05-17 12:15,0.13,0.17,Normal.
+1193,18,7,2026-05-17 12:45,-0.17,-0.05,Sin mucho para decir.
+1194,6,4,2026-05-17 13:45,0.29,0.07,"Día común, ni bien ni mal."
+1195,2,3,2026-05-17 14:00,0.23,0.27,Sin mucho para decir.
+1196,10,5,2026-05-17 14:00,0.25,0.06,"Día común, ni bien ni mal."
+1197,14,7,2026-05-17 14:45,-0.27,0.61,Me frustré porque no me salían las cosas.
+1198,12,4,2026-05-17 15:00,0.64,0.34,"Buen día, trabajé cómodo con el grupo."
+1199,12,4,2026-05-17 15:30,0.22,0.25,Normal.
+1200,30,3,2026-05-17 16:30,-0.17,-0.15,Sin mucho para decir.
+1201,6,6,2026-05-18 09:00,0.23,0.05,Normal.
+1202,8,5,2026-05-18 11:30,0.27,0.0,Normal.
+1203,15,8,2026-05-18 12:30,0.78,0.39,Me gustó la actividad de hoy.
+1204,3,7,2026-05-18 14:30,0.0,0.57,"Buen día, trabajé cómodo con el grupo."
+1205,8,6,2026-05-18 15:45,0.2,0.16,"Día común, ni bien ni mal."
+1206,17,7,2026-05-18 16:45,-0.33,0.01,Discutí con un compañero y quedé alterado.
+1207,1,1,2026-05-18 17:30,-0.05,0.19,Normal.
+1208,1,6,2026-05-19 09:30,-0.01,0.08,Normal.
+1209,29,7,2026-05-19 09:30,0.78,0.26,Me sentí con energía y participé en clase.
+1210,3,5,2026-05-19 10:00,0.07,0.04,Sin mucho para decir.
+1211,21,6,2026-05-19 12:45,0.58,0.36,"Buen día, trabajé cómodo con el grupo."
+1212,16,7,2026-05-19 14:45,-0.13,-0.16,"Día común, ni bien ni mal."
+1213,30,8,2026-05-19 15:00,-0.28,-0.1,Normal.
+1214,30,1,2026-05-19 15:15,-0.35,-0.25,Me cuesta todo últimamente.
+1215,24,8,2026-05-19 16:30,0.32,0.3,"Buen día, trabajé cómodo con el grupo."
+1216,8,1,2026-05-19 16:45,0.3,0.32,Me gustó la actividad de hoy.
+1217,22,5,2026-05-19 17:00,0.0,0.59,Me sentí con energía y participé en clase.
+1218,14,3,2026-05-19 17:15,0.03,0.15,Sin mucho para decir.
+1219,23,8,2026-05-19 17:15,0.43,0.39,Me sentí con energía y participé en clase.
+1220,20,8,2026-05-20 08:00,0.33,0.11,"Buen día, trabajé cómodo con el grupo."
+1221,21,2,2026-05-20 08:15,0.41,0.44,"Buen día, trabajé cómodo con el grupo."
+1222,3,1,2026-05-20 08:45,1.0,-0.32,"Tranquilo, sin novedades."
+1223,20,7,2026-05-20 10:00,0.43,0.48,"Buen día, trabajé cómodo con el grupo."
+1224,17,3,2026-05-20 10:15,0.0,-0.36,"Tranquilo, sin novedades."
+1225,4,4,2026-05-20 10:45,0.21,-0.04,Normal.
+1226,20,3,2026-05-20 12:45,0.3,0.21,Me gustó la actividad de hoy.
+1227,8,8,2026-05-20 13:30,-0.16,0.12,"Día común, ni bien ni mal."
+1228,11,7,2026-05-20 14:30,0.2,0.27,"Día común, ni bien ni mal."
+1229,2,4,2026-05-20 15:15,0.8,-0.14,"Día normal, bastante calmado."
+1230,11,8,2026-05-20 16:15,0.22,-0.01,Sin mucho para decir.
+1231,11,6,2026-05-20 16:15,-0.28,0.24,"Día común, ni bien ni mal."
+1232,28,2,2026-05-20 16:15,-0.06,0.13,Normal.
+1233,10,3,2026-05-20 17:00,0.03,-0.11,Sin mucho para decir.
+1234,22,6,2026-05-20 17:15,0.16,0.3,Me gustó la actividad de hoy.
+1235,21,2,2026-05-21 08:15,0.42,0.63,Me sentí con energía y participé en clase.
+1236,5,7,2026-05-21 09:15,0.39,0.3,"Buen día, trabajé cómodo con el grupo."
+1237,4,7,2026-05-21 12:30,0.18,-0.27,Sin mucho para decir.
+1238,5,3,2026-05-21 12:30,0.61,0.46,Me gustó la actividad de hoy.
+1239,27,7,2026-05-21 12:30,0.01,0.35,Me sentí con energía y participé en clase.
+1240,13,2,2026-05-21 15:15,0.57,0.35,"Buen día, trabajé cómodo con el grupo."
+1241,24,1,2026-05-21 15:45,0.14,0.38,Me gustó la actividad de hoy.
+1242,3,6,2026-05-21 16:00,0.42,-0.17,"Tranquilo, sin novedades."
+1243,6,7,2026-05-21 16:00,-0.06,-0.46,"Preferí estar solo, no quería hablar."
+1244,23,7,2026-05-21 16:15,0.53,-0.07,"Día normal, bastante calmado."
+1245,18,2,2026-05-21 17:00,0.09,-0.03,Sin mucho para decir.
+1246,25,2,2026-05-21 17:45,0.41,0.29,Me gustó la actividad de hoy.
+1247,19,1,2026-05-22 08:00,0.56,0.61,"Buen día, trabajé cómodo con el grupo."
+1248,29,5,2026-05-22 08:15,0.44,0.22,"Buen día, trabajé cómodo con el grupo."
+1249,4,5,2026-05-22 08:30,0.3,-0.14,Me sentí en paz durante la jornada.
+1250,7,5,2026-05-22 09:15,0.09,0.34,Me sentí con energía y participé en clase.
+1251,4,7,2026-05-22 09:30,-0.46,-0.05,"Preferí estar solo, no quería hablar."
+1252,19,7,2026-05-22 09:30,0.44,0.66,"Buen día, trabajé cómodo con el grupo."
+1253,16,6,2026-05-22 09:45,-0.04,0.37,Discutí con un compañero y quedé alterado.
+1254,12,2,2026-05-22 10:15,0.21,0.57,Me gustó la actividad de hoy.
+1255,16,2,2026-05-22 10:45,0.11,-0.08,"Día común, ni bien ni mal."
+1256,22,7,2026-05-22 11:00,-0.46,0.58,Me puse nervioso con la prueba.
+1257,26,2,2026-05-22 14:15,-0.02,0.06,Sin mucho para decir.
+1258,25,4,2026-05-22 14:30,0.54,0.13,Me sentí con energía y participé en clase.
+1259,9,7,2026-05-22 15:00,0.13,0.54,"Buen día, trabajé cómodo con el grupo."
+1260,2,7,2026-05-22 15:30,0.32,0.05,Me gustó la actividad de hoy.
+1261,5,7,2026-05-22 15:45,0.59,0.23,Me gustó la actividad de hoy.
+1262,7,3,2026-05-22 16:15,0.36,0.34,"Buen día, trabajé cómodo con el grupo."
+1263,25,6,2026-05-22 17:45,0.53,0.39,"Buen día, trabajé cómodo con el grupo."
+1264,9,4,2026-05-23 09:15,-0.0,0.4,"Buen día, trabajé cómodo con el grupo."
+1265,11,6,2026-05-23 09:15,-0.24,-0.05,Sin mucho para decir.
+1266,21,5,2026-05-23 10:00,0.44,0.31,"Buen día, trabajé cómodo con el grupo."
+1267,3,7,2026-05-23 12:45,0.38,0.16,Me gustó la actividad de hoy.
+1268,8,5,2026-05-23 13:45,0.63,0.19,Me gustó la actividad de hoy.
+1269,18,4,2026-05-23 15:15,-0.2,0.33,Me puse nervioso con la prueba.
+1270,23,3,2026-05-23 16:45,0.38,0.1,"Buen día, trabajé cómodo con el grupo."
+1271,13,5,2026-05-23 17:15,0.38,0.72,"Buen día, trabajé cómodo con el grupo."
+1272,25,3,2026-05-24 10:00,0.41,0.3,Me gustó la actividad de hoy.
+1273,22,2,2026-05-24 10:30,-0.41,0.48,Me frustré porque no me salían las cosas.
+1274,3,2,2026-05-24 10:45,0.48,-0.25,Me sentí en paz durante la jornada.
+1275,16,5,2026-05-24 11:30,-0.04,-0.23,"Día común, ni bien ni mal."
+1276,6,8,2026-05-24 12:00,0.26,-0.31,"Día normal, bastante calmado."
+1277,21,1,2026-05-24 12:45,0.63,0.44,Me sentí con energía y participé en clase.
+1278,13,3,2026-05-24 13:15,0.72,0.4,"Buen día, trabajé cómodo con el grupo."
+1279,7,2,2026-05-24 13:30,0.67,0.71,"Buen día, trabajé cómodo con el grupo."
+1280,30,1,2026-05-24 13:30,0.04,-0.13,Normal.
+1281,6,8,2026-05-24 15:30,-0.18,0.23,"Día común, ni bien ni mal."
+1282,5,6,2026-05-24 16:00,0.44,0.18,Me gustó la actividad de hoy.
+1283,27,2,2026-05-25 08:15,0.48,0.09,Me sentí con energía y participé en clase.
+1284,14,5,2026-05-25 08:30,0.86,0.53,Me sentí con energía y participé en clase.
+1285,16,4,2026-05-25 08:30,0.24,0.08,"Día común, ni bien ni mal."
+1286,9,1,2026-05-25 09:15,0.42,0.3,"Buen día, trabajé cómodo con el grupo."
+1287,11,1,2026-05-25 09:30,-0.38,0.07,Discutí con un compañero y quedé alterado.
+1288,16,1,2026-05-25 10:00,0.31,0.21,"Buen día, trabajé cómodo con el grupo."
+1289,7,2,2026-05-25 10:30,0.6,0.78,Me gustó la actividad de hoy.
+1290,12,7,2026-05-25 11:15,0.79,0.41,"Buen día, trabajé cómodo con el grupo."
+1291,3,2,2026-05-25 13:15,0.6,0.06,Me sentí con energía y participé en clase.
+1292,30,6,2026-05-25 13:45,-0.25,-0.15,"Día común, ni bien ni mal."
+1293,20,8,2026-05-25 14:15,0.49,0.33,Me sentí con energía y participé en clase.
+1294,17,5,2026-05-25 14:30,0.09,-0.4,"Día normal, bastante calmado."
+1295,19,2,2026-05-25 14:30,0.29,0.12,"Día común, ni bien ni mal."
+1296,29,6,2026-05-25 15:15,0.48,0.4,Me sentí con energía y participé en clase.
+1297,8,5,2026-05-25 15:30,0.19,0.38,"Buen día, trabajé cómodo con el grupo."
+1298,19,6,2026-05-25 16:45,0.24,0.46,Me gustó la actividad de hoy.
+1299,14,2,2026-05-26 10:00,0.41,0.3,"Buen día, trabajé cómodo con el grupo."
+1300,22,7,2026-05-26 12:00,0.09,0.15,Normal.
+1301,6,7,2026-05-26 12:45,0.7,-0.16,"Tranquilo, sin novedades."
+1302,1,6,2026-05-26 13:15,0.24,-0.11,Sin mucho para decir.
+1303,4,8,2026-05-26 14:15,-0.56,0.02,Me puse nervioso con la prueba.
+1304,8,3,2026-05-26 14:30,0.34,0.28,"Buen día, trabajé cómodo con el grupo."
+1305,21,1,2026-05-26 15:15,0.73,0.3,Me sentí con energía y participé en clase.
+1306,4,4,2026-05-26 15:30,-0.24,0.28,Normal.
+1307,15,1,2026-05-26 16:30,0.61,0.25,Me gustó la actividad de hoy.
+1308,26,8,2026-05-26 17:00,0.21,0.21,Sin mucho para decir.
+1309,30,5,2026-05-26 17:30,-0.23,0.04,Sin mucho para decir.
+1310,25,4,2026-05-26 17:45,0.58,0.53,Me sentí con energía y participé en clase.
+1311,2,7,2026-05-27 09:15,0.22,0.12,"Día común, ni bien ni mal."
+1312,27,4,2026-05-27 09:30,0.34,0.31,"Buen día, trabajé cómodo con el grupo."
+1313,20,5,2026-05-27 12:15,0.31,0.27,Me sentí con energía y participé en clase.
+1314,8,3,2026-05-27 12:30,-0.05,0.07,"Día común, ni bien ni mal."
+1315,24,1,2026-05-27 12:30,0.28,0.15,"Día común, ni bien ni mal."
+1316,25,6,2026-05-27 12:45,0.38,0.21,Me sentí con energía y participé en clase.
+1317,25,5,2026-05-27 14:15,0.24,0.23,"Día común, ni bien ni mal."
+1318,12,2,2026-05-27 15:15,0.45,-0.05,"Tranquilo, sin novedades."
+1319,11,8,2026-05-27 15:30,-0.27,0.28,"Día común, ni bien ni mal."
+1320,17,6,2026-05-27 16:30,-0.17,-0.33,Me sentí bastante bajoneado.
+1321,2,2,2026-05-27 17:00,0.37,-0.05,"Día normal, bastante calmado."
+1322,16,7,2026-05-27 17:30,0.33,-0.03,Me sentí en paz durante la jornada.
+1323,3,4,2026-05-28 08:00,-0.19,-0.34,Me sentí bastante bajoneado.
+1324,20,4,2026-05-28 08:00,0.39,0.16,"Buen día, trabajé cómodo con el grupo."
+1325,26,7,2026-05-28 08:00,0.2,-0.03,Sin mucho para decir.
+1326,12,5,2026-05-28 09:15,0.48,0.22,Me gustó la actividad de hoy.
+1327,15,8,2026-05-28 09:15,0.43,0.54,Me sentí con energía y participé en clase.
+1328,10,1,2026-05-28 09:30,0.52,0.56,Me sentí con energía y participé en clase.
+1329,29,1,2026-05-28 09:30,0.31,0.2,"Buen día, trabajé cómodo con el grupo."
+1330,23,2,2026-05-28 10:00,0.45,0.63,Me sentí con energía y participé en clase.
+1331,28,6,2026-05-28 11:15,0.02,0.02,"Día común, ni bien ni mal."
+1332,1,2,2026-05-28 11:30,0.13,0.13,"Día común, ni bien ni mal."
+1333,30,2,2026-05-28 12:00,-0.28,-0.36,"Preferí estar solo, no quería hablar."
+1334,29,7,2026-05-28 13:45,0.52,0.35,"Buen día, trabajé cómodo con el grupo."
+1335,5,5,2026-05-28 14:00,0.57,0.47,Me gustó la actividad de hoy.
+1336,12,7,2026-05-28 14:30,0.51,0.42,"Buen día, trabajé cómodo con el grupo."
+1337,28,1,2026-05-28 14:30,-0.0,0.19,"Día común, ni bien ni mal."
+1338,22,2,2026-05-28 14:45,0.13,-0.01,"Día común, ni bien ni mal."
+1339,2,6,2026-05-28 16:00,0.12,0.12,"Día común, ni bien ni mal."
+1340,28,4,2026-05-28 17:15,-0.21,-0.03,Sin mucho para decir.
+1341,5,7,2026-05-29 09:00,0.51,0.32,Me sentí con energía y participé en clase.
+1342,4,8,2026-05-29 10:45,-0.34,-0.24,"Preferí estar solo, no quería hablar."
+1343,22,4,2026-05-29 10:45,-0.34,0.44,Me frustré porque no me salían las cosas.
+1344,18,5,2026-05-29 12:00,0.19,0.0,Sin mucho para decir.
+1345,18,3,2026-05-29 13:00,-0.12,-0.39,No tenía ganas de nada hoy.
+1346,24,3,2026-05-29 13:00,0.04,0.09,Sin mucho para decir.
+1347,4,6,2026-05-29 14:00,-0.02,0.16,Normal.
+1348,10,7,2026-05-29 14:30,-0.16,-0.06,Normal.
+1349,6,6,2026-05-29 15:15,-0.09,0.01,Normal.
+1350,2,1,2026-05-29 16:15,0.34,0.13,Me gustó la actividad de hoy.
+1351,18,3,2026-05-29 16:30,0.09,-0.34,"Día normal, bastante calmado."
+1352,7,4,2026-05-30 08:30,0.8,0.44,Me gustó la actividad de hoy.
+1353,25,2,2026-05-30 08:30,0.3,0.52,"Buen día, trabajé cómodo con el grupo."
+1354,13,7,2026-05-30 09:30,0.26,0.47,Me sentí con energía y participé en clase.
+1355,21,4,2026-05-30 11:00,0.37,0.26,Me gustó la actividad de hoy.
+1356,2,5,2026-05-30 11:30,0.05,0.56,Me sentí con energía y participé en clase.
+1357,6,1,2026-05-30 13:15,-0.05,0.2,Sin mucho para decir.
+1358,14,4,2026-05-30 13:15,0.37,0.06,"Buen día, trabajé cómodo con el grupo."
+1359,6,7,2026-05-30 14:00,0.29,-0.37,Me sentí en paz durante la jornada.
+1360,28,5,2026-05-30 14:15,0.29,-0.1,"Día común, ni bien ni mal."
+1361,16,1,2026-05-30 14:30,-0.11,0.29,Normal.
+1362,12,6,2026-05-30 16:00,0.46,0.61,"Buen día, trabajé cómodo con el grupo."
+1363,12,1,2026-05-30 17:00,0.75,0.26,"Buen día, trabajé cómodo con el grupo."
+1364,21,5,2026-05-31 08:00,0.86,0.25,"Buen día, trabajé cómodo con el grupo."
+1365,8,4,2026-05-31 08:15,-0.12,-0.14,"Día común, ni bien ni mal."
+1366,15,4,2026-05-31 11:00,0.48,0.32,Me sentí con energía y participé en clase.
+1367,16,3,2026-05-31 11:00,0.26,0.07,"Día común, ni bien ni mal."
+1368,23,3,2026-05-31 13:15,0.4,0.33,Me sentí con energía y participé en clase.
+1369,22,1,2026-05-31 13:30,-0.11,0.39,Me frustré porque no me salían las cosas.
+1370,4,2,2026-05-31 14:15,-0.07,-0.14,Sin mucho para decir.
+1371,9,4,2026-06-01 08:15,0.3,0.63,Me gustó la actividad de hoy.
+1372,3,8,2026-06-01 08:45,-0.11,0.53,Me puse nervioso con la prueba.
+1373,4,2,2026-06-01 09:45,0.33,0.32,Me gustó la actividad de hoy.
+1374,18,3,2026-06-01 11:00,0.22,0.33,Me gustó la actividad de hoy.
+1375,18,3,2026-06-01 11:45,0.09,-0.43,"Tranquilo, sin novedades."
+1376,2,6,2026-06-01 12:15,-0.06,-0.19,"Día común, ni bien ni mal."
+1377,27,7,2026-06-01 12:15,0.5,0.32,"Buen día, trabajé cómodo con el grupo."
+1378,19,7,2026-06-01 12:30,0.29,0.52,Me gustó la actividad de hoy.
+1379,17,3,2026-06-01 13:15,-0.21,-0.02,Normal.
+1380,20,8,2026-06-01 13:15,0.39,0.8,"Buen día, trabajé cómodo con el grupo."
+1381,20,5,2026-06-01 13:45,0.52,0.62,"Buen día, trabajé cómodo con el grupo."
+1382,25,5,2026-06-01 14:15,0.52,0.51,Me gustó la actividad de hoy.
+1383,28,2,2026-06-01 15:30,-0.3,-0.03,Me sentí bastante bajoneado.
+1384,10,6,2026-06-01 17:45,-0.29,0.21,"Día común, ni bien ni mal."
+1385,14,3,2026-06-02 08:45,-0.24,-0.09,Normal.
+1386,8,1,2026-06-02 09:15,0.26,0.17,Normal.
+1387,26,6,2026-06-02 09:30,0.49,-0.07,Me sentí en paz durante la jornada.
+1388,9,7,2026-06-02 11:15,0.82,0.75,Me sentí con energía y participé en clase.
+1389,30,8,2026-06-02 12:00,-0.12,-0.48,No tenía ganas de nada hoy.
+1390,23,8,2026-06-02 12:30,0.57,0.61,"Buen día, trabajé cómodo con el grupo."
+1391,30,8,2026-06-02 13:00,-0.1,-0.31,No tenía ganas de nada hoy.
+1392,16,3,2026-06-02 13:15,0.3,0.04,"Buen día, trabajé cómodo con el grupo."
+1393,10,6,2026-06-02 15:15,-0.16,-0.24,Normal.
+1394,27,3,2026-06-02 15:15,0.26,-0.08,Normal.
+1395,18,5,2026-06-02 16:00,0.38,0.12,Me sentí con energía y participé en clase.
+1396,24,7,2026-06-02 16:15,0.29,-0.0,"Día común, ni bien ni mal."
+1397,30,3,2026-06-02 16:30,-0.34,-0.41,"Preferí estar solo, no quería hablar."
+1398,3,7,2026-06-03 08:30,0.04,0.09,Normal.
+1399,2,4,2026-06-03 09:00,0.41,0.07,Me gustó la actividad de hoy.
+1400,7,6,2026-06-03 10:15,0.3,0.16,Me gustó la actividad de hoy.
+1401,6,2,2026-06-03 10:45,0.11,-0.13,"Día común, ni bien ni mal."
+1402,20,5,2026-06-03 11:00,0.49,0.44,Me sentí con energía y participé en clase.
+1403,5,8,2026-06-03 11:15,0.42,0.43,Me sentí con energía y participé en clase.
+1404,25,8,2026-06-03 11:15,0.32,0.47,Me sentí con energía y participé en clase.
+1405,29,2,2026-06-03 11:15,0.03,0.27,Normal.
+1406,21,7,2026-06-03 11:45,0.15,0.43,Me gustó la actividad de hoy.
+1407,5,5,2026-06-03 13:00,0.55,0.21,Me gustó la actividad de hoy.
+1408,30,8,2026-06-03 13:00,-0.2,-0.21,Normal.
+1409,4,6,2026-06-03 14:00,-0.07,-0.31,Me cuesta todo últimamente.
+1410,12,3,2026-06-03 14:30,0.69,0.61,"Buen día, trabajé cómodo con el grupo."
+1411,11,4,2026-06-03 14:45,-0.04,0.0,Sin mucho para decir.
+1412,28,8,2026-06-03 16:00,-0.07,0.22,Normal.
+1413,5,5,2026-06-03 17:00,0.48,0.54,Me sentí con energía y participé en clase.
+1414,22,4,2026-06-03 17:15,-0.19,0.5,Me puse nervioso con la prueba.
+1415,16,2,2026-06-04 08:00,0.42,0.04,"Buen día, trabajé cómodo con el grupo."
+1416,1,4,2026-06-04 09:15,0.14,0.22,"Día común, ni bien ni mal."
+1417,11,4,2026-06-04 09:15,0.24,0.19,Normal.
+1418,17,8,2026-06-04 09:30,-0.56,-0.36,Me cuesta todo últimamente.
+1419,2,6,2026-06-04 12:45,0.09,0.17,"Día común, ni bien ni mal."
+1420,29,5,2026-06-04 13:00,0.61,0.41,"Buen día, trabajé cómodo con el grupo."
+1421,11,1,2026-06-04 14:45,-0.21,-0.23,Normal.
+1422,8,4,2026-06-04 15:45,0.23,0.03,Sin mucho para decir.
+1423,1,6,2026-06-04 16:15,-0.07,0.09,"Día común, ni bien ni mal."
+1424,15,3,2026-06-04 16:45,0.47,0.29,Me gustó la actividad de hoy.
+1425,22,2,2026-06-04 17:00,0.16,0.6,Me gustó la actividad de hoy.
+1426,25,6,2026-06-04 17:45,0.54,0.25,Me gustó la actividad de hoy.
+1427,8,1,2026-06-05 09:15,-0.04,0.34,Me puse nervioso con la prueba.
+1428,26,1,2026-06-05 09:15,-0.29,0.22,Sin mucho para decir.
+1429,3,5,2026-06-05 11:00,0.36,0.68,Me gustó la actividad de hoy.
+1430,12,7,2026-06-05 11:45,0.26,0.1,"Día común, ni bien ni mal."
+1431,19,8,2026-06-05 11:45,0.41,0.62,Me sentí con energía y participé en clase.
+1432,24,1,2026-06-05 12:30,-0.18,-0.08,Sin mucho para decir.
+1433,29,5,2026-06-05 13:30,0.45,0.12,Me gustó la actividad de hoy.
+1434,4,2,2026-06-05 15:00,0.22,-0.22,"Día común, ni bien ni mal."
+1435,3,7,2026-06-05 15:15,-0.13,0.35,Me puse nervioso con la prueba.
+1436,22,8,2026-06-05 15:15,0.37,0.51,Me sentí con energía y participé en clase.
+1437,6,5,2026-06-05 16:00,0.0,0.02,"Día común, ni bien ni mal."
+1438,13,1,2026-06-05 16:15,0.22,0.48,"Buen día, trabajé cómodo con el grupo."
+1439,18,2,2026-06-05 16:45,0.23,-0.36,"Día normal, bastante calmado."
+1440,6,7,2026-06-06 08:15,0.13,-0.11,Normal.
+1441,15,6,2026-06-06 08:15,0.19,0.34,"Buen día, trabajé cómodo con el grupo."
+1442,4,1,2026-06-06 08:30,-0.53,-0.04,"Preferí estar solo, no quería hablar."
+1443,8,2,2026-06-06 08:30,0.59,-0.07,"Día normal, bastante calmado."
+1444,10,3,2026-06-06 09:30,0.05,0.21,Sin mucho para decir.
+1445,25,8,2026-06-06 10:45,-0.05,0.56,Discutí con un compañero y quedé alterado.
+1446,19,3,2026-06-06 11:45,0.68,0.62,Me sentí con energía y participé en clase.
+1447,18,4,2026-06-06 12:00,0.32,0.28,"Buen día, trabajé cómodo con el grupo."
+1448,28,2,2026-06-06 12:15,-0.22,0.22,"Día común, ni bien ni mal."
+1449,8,8,2026-06-06 13:15,-0.04,0.08,Normal.
+1450,20,3,2026-06-06 14:00,0.45,0.71,Me sentí con energía y participé en clase.
+1451,2,1,2026-06-06 14:30,0.45,-0.19,"Tranquilo, sin novedades."
+1452,8,3,2026-06-06 14:45,-0.26,0.26,Normal.
+1453,27,2,2026-06-07 08:45,0.66,0.42,Me sentí con energía y participé en clase.
+1454,4,2,2026-06-07 09:45,-0.55,-0.57,No tenía ganas de nada hoy.
+1455,20,8,2026-06-07 10:15,0.12,0.23,"Día común, ni bien ni mal."
+1456,12,7,2026-06-07 10:30,0.37,0.55,Me gustó la actividad de hoy.
+1457,23,5,2026-06-07 11:00,0.39,0.29,Me sentí con energía y participé en clase.
+1458,29,7,2026-06-07 11:00,0.53,0.41,"Buen día, trabajé cómodo con el grupo."
+1459,3,6,2026-06-07 13:30,0.34,0.01,"Buen día, trabajé cómodo con el grupo."
+1460,24,5,2026-06-07 13:45,-0.07,0.28,"Día común, ni bien ni mal."
+1461,25,8,2026-06-07 15:45,0.3,0.23,"Buen día, trabajé cómodo con el grupo."
+1462,4,3,2026-06-07 16:45,-0.34,0.03,Me puse nervioso con la prueba.
+1463,18,6,2026-06-07 17:45,0.02,-0.1,Sin mucho para decir.
+1464,24,2,2026-06-08 08:15,0.02,0.12,Sin mucho para decir.
+1465,2,3,2026-06-08 09:00,0.46,0.32,"Buen día, trabajé cómodo con el grupo."
+1466,3,5,2026-06-08 11:00,0.43,-0.25,"Día normal, bastante calmado."
+1467,6,7,2026-06-08 11:15,0.19,0.05,"Día común, ni bien ni mal."
+1468,18,7,2026-06-08 11:15,0.23,0.02,Sin mucho para decir.
+1469,26,1,2026-06-08 11:15,0.3,-0.26,"Día normal, bastante calmado."
+1470,2,8,2026-06-08 11:30,0.07,0.2,Sin mucho para decir.
+1471,5,1,2026-06-08 13:30,0.57,0.6,Me sentí con energía y participé en clase.
+1472,28,8,2026-06-08 14:15,-0.21,0.01,Sin mucho para decir.
+1473,1,2,2026-06-08 14:30,0.11,0.11,"Día común, ni bien ni mal."
+1474,16,4,2026-06-08 15:15,-0.01,0.09,Normal.
+1475,11,7,2026-06-08 15:30,-0.3,0.06,Discutí con un compañero y quedé alterado.
+1476,19,3,2026-06-08 16:00,0.49,0.53,"Buen día, trabajé cómodo con el grupo."
+1477,2,5,2026-06-08 17:00,-0.15,0.15,Normal.
+1478,3,8,2026-06-08 17:45,0.1,-0.78,"Día normal, bastante calmado."
+1479,5,1,2026-06-09 09:15,0.61,0.18,Me sentí con energía y participé en clase.
+1480,30,5,2026-06-09 09:15,-0.51,-0.19,"Preferí estar solo, no quería hablar."
+1481,16,3,2026-06-09 09:30,0.09,0.02,Sin mucho para decir.
+1482,9,6,2026-06-09 09:45,-0.14,0.5,Me puse nervioso con la prueba.
+1483,30,2,2026-06-09 11:00,0.26,-0.15,Normal.
+1484,7,2,2026-06-09 12:45,0.46,0.68,Me gustó la actividad de hoy.
+1485,22,6,2026-06-09 15:00,0.14,0.03,"Día común, ni bien ni mal."
+1486,5,3,2026-06-09 15:30,0.45,0.22,"Buen día, trabajé cómodo con el grupo."
+1487,9,5,2026-06-09 15:30,-0.21,0.02,Sin mucho para decir.
+1488,7,5,2026-06-09 16:30,0.23,0.48,"Buen día, trabajé cómodo con el grupo."
+1489,4,8,2026-06-09 17:15,-0.03,0.12,Normal.
+1490,23,4,2026-06-10 08:45,0.11,0.44,Me sentí con energía y participé en clase.
+1491,25,4,2026-06-10 08:45,0.38,0.44,Me gustó la actividad de hoy.
+1492,22,1,2026-06-10 10:30,0.18,-0.08,Sin mucho para decir.
+1493,13,5,2026-06-10 11:00,0.44,0.39,Me sentí con energía y participé en clase.
+1494,16,4,2026-06-10 11:30,0.16,-0.2,Sin mucho para decir.
+1495,17,1,2026-06-10 12:45,-0.57,-0.72,No tenía ganas de nada hoy.
+1496,3,1,2026-06-10 14:30,0.22,0.62,"Buen día, trabajé cómodo con el grupo."
+1497,11,1,2026-06-10 14:45,-0.3,-0.28,Me sentí bastante bajoneado.
+1498,13,6,2026-06-10 15:30,0.48,0.18,"Buen día, trabajé cómodo con el grupo."
+1499,12,5,2026-06-10 16:15,0.43,0.28,Me sentí con energía y participé en clase.
+1500,22,8,2026-06-10 16:30,0.18,-0.06,Normal.
+1501,8,3,2026-06-10 16:45,-0.04,0.7,Discutí con un compañero y quedé alterado.
+1502,14,3,2026-06-10 16:45,0.21,0.32,Me sentí con energía y participé en clase.
+1503,29,3,2026-06-10 17:30,0.4,0.19,Me sentí con energía y participé en clase.
+1504,17,5,2026-06-11 08:15,-0.26,-0.33,Me sentí bastante bajoneado.
+1505,25,8,2026-06-11 08:15,0.47,0.37,Me gustó la actividad de hoy.
+1506,12,7,2026-06-11 09:30,0.22,0.09,Normal.
+1507,26,6,2026-06-11 09:30,0.08,0.12,"Día común, ni bien ni mal."
+1508,6,8,2026-06-11 10:45,0.0,0.45,Me gustó la actividad de hoy.
+1509,28,3,2026-06-11 10:45,0.24,0.16,"Día común, ni bien ni mal."
+1510,15,6,2026-06-11 11:30,0.06,0.46,"Buen día, trabajé cómodo con el grupo."
+1511,18,6,2026-06-11 12:15,-0.1,0.07,Sin mucho para decir.
+1512,1,8,2026-06-11 13:15,0.34,-0.1,"Día normal, bastante calmado."
+1513,6,3,2026-06-11 13:15,0.48,-0.13,"Tranquilo, sin novedades."
+1514,22,2,2026-06-11 13:15,0.45,0.07,Me sentí con energía y participé en clase.
+1515,14,5,2026-06-11 16:30,0.0,-0.37,"Día normal, bastante calmado."
+1516,16,5,2026-06-11 17:00,0.15,-0.04,"Día común, ni bien ni mal."
+1517,21,1,2026-06-11 17:30,0.45,0.56,Me sentí con energía y participé en clase.
+1518,10,2,2026-06-11 17:45,0.32,-0.03,Me sentí en paz durante la jornada.
+1519,11,3,2026-06-12 09:00,-0.07,0.21,Sin mucho para decir.
+1520,21,7,2026-06-12 12:00,0.42,0.36,Me sentí con energía y participé en clase.
+1521,30,7,2026-06-12 12:30,-0.42,-0.28,"Preferí estar solo, no quería hablar."
+1522,12,7,2026-06-12 14:30,0.54,0.75,"Buen día, trabajé cómodo con el grupo."
+1523,27,2,2026-06-12 15:00,0.29,0.63,Me gustó la actividad de hoy.
+1524,21,6,2026-06-12 15:15,0.5,0.35,Me sentí con energía y participé en clase.
+1525,29,6,2026-06-12 15:45,0.55,0.46,Me sentí con energía y participé en clase.
+1526,20,8,2026-06-12 16:30,0.54,0.54,"Buen día, trabajé cómodo con el grupo."
+1527,30,7,2026-06-12 16:45,-0.41,-0.28,Me sentí bastante bajoneado.
+1528,16,2,2026-06-13 08:00,0.28,-0.03,Normal.
+1529,19,7,2026-06-13 10:45,0.47,0.35,Me sentí con energía y participé en clase.
+1530,29,3,2026-06-13 11:15,0.35,0.63,Me gustó la actividad de hoy.
+1531,4,6,2026-06-13 11:45,0.22,-0.22,Normal.
+1532,2,1,2026-06-13 12:30,-0.12,-0.03,Sin mucho para decir.
+1533,2,3,2026-06-13 13:45,0.14,0.21,"Día común, ni bien ni mal."
+1534,6,4,2026-06-13 15:00,0.17,-0.18,Normal.
+1535,16,2,2026-06-13 16:00,0.04,-0.06,Sin mucho para decir.
+1536,16,4,2026-06-13 16:45,0.05,-0.13,Normal.
+1537,19,7,2026-06-13 17:00,0.57,0.4,"Buen día, trabajé cómodo con el grupo."
+1538,25,2,2026-06-13 17:45,0.19,0.23,"Día común, ni bien ni mal."
+1539,17,4,2026-06-14 08:30,-0.16,-0.44,No tenía ganas de nada hoy.
+1540,29,6,2026-06-14 08:45,0.53,0.3,"Buen día, trabajé cómodo con el grupo."
+1541,27,4,2026-06-14 09:30,0.44,-0.03,"Tranquilo, sin novedades."
+1542,4,6,2026-06-14 09:45,0.04,-0.43,Me sentí en paz durante la jornada.
+1543,12,2,2026-06-14 09:45,0.58,0.31,"Buen día, trabajé cómodo con el grupo."
+1544,26,4,2026-06-14 10:00,0.28,-0.11,"Día común, ni bien ni mal."
+1545,11,3,2026-06-14 12:00,-0.35,-0.41,"Preferí estar solo, no quería hablar."
+1546,21,8,2026-06-14 12:00,0.39,0.19,Me gustó la actividad de hoy.
+1547,1,4,2026-06-14 12:15,0.34,-0.16,Me sentí en paz durante la jornada.
+1548,30,7,2026-06-14 12:45,-0.53,-0.32,"Preferí estar solo, no quería hablar."
+1549,3,5,2026-06-14 14:15,0.24,0.04,Normal.
+1550,8,4,2026-06-14 15:30,0.03,-0.07,"Día común, ni bien ni mal."
+1551,30,4,2026-06-14 17:45,-0.63,-0.58,Me cuesta todo últimamente.
+1552,6,7,2026-06-15 09:00,0.05,-0.03,Sin mucho para decir.
+1553,12,6,2026-06-15 09:00,0.67,0.57,"Buen día, trabajé cómodo con el grupo."
+1554,14,2,2026-06-15 09:45,0.43,0.24,"Buen día, trabajé cómodo con el grupo."
+1555,28,4,2026-06-15 10:30,-0.33,-0.14,Me cuesta todo últimamente.
+1556,2,7,2026-06-15 10:45,0.04,0.15,Normal.
+1557,6,6,2026-06-15 12:00,0.31,0.11,Me sentí con energía y participé en clase.
+1558,16,1,2026-06-15 12:45,-0.05,-0.14,"Día común, ni bien ni mal."
+1559,7,3,2026-06-15 13:45,0.67,0.63,"Buen día, trabajé cómodo con el grupo."
+1560,11,5,2026-06-15 15:15,-0.34,-0.15,No tenía ganas de nada hoy.
+1561,4,1,2026-06-15 15:30,-0.09,-0.01,Sin mucho para decir.
+1562,3,4,2026-06-15 16:00,0.63,-0.2,"Tranquilo, sin novedades."
+1563,13,3,2026-06-15 17:15,0.52,0.16,Me sentí con energía y participé en clase.
+1564,14,4,2026-06-15 17:45,-0.06,0.51,Me puse nervioso con la prueba.
+1565,25,1,2026-06-16 09:30,0.51,0.3,"Buen día, trabajé cómodo con el grupo."
+1566,26,8,2026-06-16 09:30,0.0,-0.11,"Día común, ni bien ni mal."
+1567,22,2,2026-06-16 11:45,-0.01,0.96,Me frustré porque no me salían las cosas.
+1568,5,2,2026-06-16 12:15,0.23,0.46,"Buen día, trabajé cómodo con el grupo."
+1569,22,2,2026-06-16 12:30,0.17,0.16,"Día común, ni bien ni mal."
+1570,10,2,2026-06-16 13:30,0.54,0.34,Me sentí con energía y participé en clase.
+1571,12,3,2026-06-16 13:30,0.47,0.37,"Buen día, trabajé cómodo con el grupo."
+1572,8,2,2026-06-16 14:30,-0.14,-0.15,Sin mucho para decir.
+1573,23,1,2026-06-16 15:00,0.28,0.24,"Día común, ni bien ni mal."
+1574,7,6,2026-06-16 15:15,0.63,0.42,Me gustó la actividad de hoy.
+1575,11,7,2026-06-16 17:15,-0.35,-0.49,Me cuesta todo últimamente.
+1576,29,3,2026-06-16 17:30,0.41,0.26,Me gustó la actividad de hoy.
+1577,13,7,2026-06-17 08:15,0.45,0.48,"Buen día, trabajé cómodo con el grupo."
+1578,18,4,2026-06-17 08:45,0.14,0.07,"Día común, ni bien ni mal."
+1579,18,2,2026-06-17 09:15,-0.02,0.2,Sin mucho para decir.
+1580,21,8,2026-06-17 09:15,0.39,0.43,Me sentí con energía y participé en clase.
+1581,24,6,2026-06-17 10:15,-0.27,0.11,Sin mucho para decir.
+1582,9,1,2026-06-17 11:15,-0.04,0.29,Sin mucho para decir.
+1583,20,5,2026-06-17 11:15,0.71,0.6,"Buen día, trabajé cómodo con el grupo."
+1584,18,2,2026-06-17 11:30,0.18,-0.04,Normal.
+1585,3,8,2026-06-17 11:45,0.22,0.59,"Buen día, trabajé cómodo con el grupo."
+1586,6,7,2026-06-17 13:15,0.24,0.23,"Día común, ni bien ni mal."
+1587,3,6,2026-06-17 13:45,-0.18,-0.01,Sin mucho para decir.
+1588,28,6,2026-06-17 13:45,0.21,-0.07,Normal.
+1589,1,6,2026-06-17 14:45,-0.06,-0.01,"Día común, ni bien ni mal."
+1590,17,7,2026-06-17 16:15,-0.6,-0.24,Me sentí bastante bajoneado.
+1591,28,8,2026-06-17 16:45,-0.02,-0.11,Sin mucho para decir.
+1592,30,3,2026-06-17 16:45,-0.4,-0.21,No tenía ganas de nada hoy.
+1593,5,1,2026-06-17 17:00,0.39,0.5,Me sentí con energía y participé en clase.
+1594,25,1,2026-06-17 17:30,0.26,0.35,Me sentí con energía y participé en clase.
+1595,27,7,2026-06-17 17:30,0.68,0.17,Me sentí con energía y participé en clase.
+1596,22,1,2026-06-18 08:45,0.17,-0.01,Sin mucho para decir.
+1597,5,8,2026-06-18 09:30,0.59,0.56,Me gustó la actividad de hoy.
+1598,2,6,2026-06-18 10:00,0.19,0.06,Normal.
+1599,12,1,2026-06-18 10:00,0.4,0.31,Me gustó la actividad de hoy.
+1600,4,5,2026-06-18 12:45,-0.44,0.36,Me puse nervioso con la prueba.
+1601,8,4,2026-06-18 13:30,0.09,0.19,"Día común, ni bien ni mal."
+1602,18,8,2026-06-18 13:45,0.16,-0.05,Sin mucho para decir.
+1603,21,4,2026-06-18 13:45,0.36,0.56,Me sentí con energía y participé en clase.
+1604,9,3,2026-06-18 14:30,-0.16,0.03,"Día común, ni bien ni mal."
+1605,10,6,2026-06-18 14:30,0.03,-0.25,"Día común, ni bien ni mal."
+1606,23,1,2026-06-18 16:15,0.56,0.25,Me sentí con energía y participé en clase.
+1607,15,1,2026-06-19 09:30,0.52,0.23,"Buen día, trabajé cómodo con el grupo."
+1608,20,6,2026-06-19 09:45,0.48,0.48,"Buen día, trabajé cómodo con el grupo."
+1609,8,5,2026-06-19 12:30,0.09,0.21,Normal.
+1610,20,1,2026-06-19 12:30,0.3,0.53,"Buen día, trabajé cómodo con el grupo."
+1611,25,2,2026-06-19 12:45,0.42,0.13,Me gustó la actividad de hoy.
+1612,24,2,2026-06-19 13:15,0.09,-0.14,Normal.
+1613,15,6,2026-06-19 15:30,0.36,0.29,Me sentí con energía y participé en clase.
+1614,22,1,2026-06-19 17:30,0.35,0.47,"Buen día, trabajé cómodo con el grupo."
+1615,30,1,2026-06-19 17:45,-0.49,-0.12,Me sentí bastante bajoneado.
+1616,5,5,2026-06-20 08:15,0.55,0.86,Me sentí con energía y participé en clase.
+1617,20,6,2026-06-20 09:15,0.31,0.23,Me sentí con energía y participé en clase.
+1618,23,5,2026-06-20 10:00,0.61,0.56,"Buen día, trabajé cómodo con el grupo."
+1619,22,8,2026-06-20 10:15,-0.31,0.25,Discutí con un compañero y quedé alterado.
+1620,25,5,2026-06-20 12:00,0.34,0.37,"Buen día, trabajé cómodo con el grupo."
+1621,13,4,2026-06-20 13:15,0.32,-0.03,"Día normal, bastante calmado."
+1622,6,7,2026-06-20 13:30,0.24,0.09,Normal.
+1623,4,1,2026-06-20 14:30,-0.43,0.08,Discutí con un compañero y quedé alterado.
+1624,29,5,2026-06-20 15:00,0.51,0.14,Me sentí con energía y participé en clase.
+1625,12,7,2026-06-20 15:30,0.47,0.33,Me sentí con energía y participé en clase.
+1626,4,5,2026-06-20 17:45,-0.05,-0.59,Me sentí bastante bajoneado.
+1627,29,2,2026-06-21 09:45,0.46,0.44,Me sentí con energía y participé en clase.
+1628,13,6,2026-06-21 10:15,0.96,0.13,Me gustó la actividad de hoy.
+1629,20,7,2026-06-21 10:30,0.39,0.6,Me gustó la actividad de hoy.
+1630,30,3,2026-06-21 10:30,-0.93,-0.26,No tenía ganas de nada hoy.
+1631,27,2,2026-06-21 14:15,0.47,0.54,"Buen día, trabajé cómodo con el grupo."
+1632,7,5,2026-06-21 15:00,0.37,0.34,"Buen día, trabajé cómodo con el grupo."
+1633,14,5,2026-06-21 15:00,-0.06,0.47,Me frustré porque no me salían las cosas.
+1634,22,6,2026-06-21 16:30,0.27,0.16,Sin mucho para decir.
+1635,28,3,2026-06-21 16:30,-0.03,0.09,"Día común, ni bien ni mal."
+1636,24,6,2026-06-22 08:00,0.16,0.02,Sin mucho para decir.
+1637,3,5,2026-06-22 08:15,0.1,0.54,Me sentí con energía y participé en clase.
+1638,22,7,2026-06-22 08:30,1.0,0.17,Me sentí con energía y participé en clase.
+1639,3,4,2026-06-22 11:00,0.11,-0.09,Sin mucho para decir.
+1640,25,1,2026-06-22 12:15,0.15,0.75,Me gustó la actividad de hoy.
+1641,5,1,2026-06-22 13:00,0.48,0.05,"Buen día, trabajé cómodo con el grupo."
+1642,22,5,2026-06-22 13:30,0.03,0.34,Me sentí con energía y participé en clase.
+1643,7,4,2026-06-22 14:45,0.45,0.43,Me sentí con energía y participé en clase.
+1644,4,6,2026-06-22 15:00,-0.04,-0.47,Me sentí bastante bajoneado.
+1645,21,8,2026-06-22 16:30,0.53,0.47,Me sentí con energía y participé en clase.
+1646,21,2,2026-06-22 17:15,0.28,0.59,Me gustó la actividad de hoy.
+1647,26,6,2026-06-23 08:00,-0.31,-0.04,No tenía ganas de nada hoy.
+1648,29,2,2026-06-23 08:15,0.66,0.37,Me sentí con energía y participé en clase.
+1649,1,2,2026-06-23 09:00,0.22,0.05,"Día común, ni bien ni mal."
+1650,23,5,2026-06-23 10:15,0.5,0.32,Me gustó la actividad de hoy.
+1651,27,8,2026-06-23 10:15,0.4,0.32,Me sentí con energía y participé en clase.
+1652,2,3,2026-06-23 11:30,0.08,-0.15,Normal.
+1653,26,5,2026-06-23 14:00,0.04,-0.24,Sin mucho para decir.
+1654,16,5,2026-06-23 14:45,0.16,-0.08,Sin mucho para decir.
+1655,8,2,2026-06-23 16:30,0.24,0.18,Normal.
+1656,11,7,2026-06-23 16:45,-0.48,-0.26,Me cuesta todo últimamente.
+1657,25,6,2026-06-23 16:45,0.42,0.34,"Buen día, trabajé cómodo con el grupo."
+1658,1,7,2026-06-23 17:00,-0.17,-0.23,Sin mucho para decir.
+1659,11,6,2026-06-23 17:00,-0.19,-0.11,"Día común, ni bien ni mal."
+1660,16,2,2026-06-23 17:30,-0.02,-0.11,Sin mucho para decir.
+1661,15,8,2026-06-24 08:00,0.52,0.6,Me sentí con energía y participé en clase.
+1662,18,3,2026-06-24 08:15,-0.12,0.04,Normal.
+1663,12,1,2026-06-24 09:15,0.45,0.43,Me sentí con energía y participé en clase.
+1664,8,3,2026-06-24 11:15,0.26,-0.04,Sin mucho para decir.
+1665,30,4,2026-06-24 11:45,-0.64,-0.59,No tenía ganas de nada hoy.
+1666,8,8,2026-06-24 13:45,0.31,0.35,Me gustó la actividad de hoy.
+1667,18,6,2026-06-24 15:15,-0.16,-0.04,Sin mucho para decir.
+1668,10,2,2026-06-24 16:45,0.3,0.17,Me sentí con energía y participé en clase.
+1669,18,8,2026-06-24 17:15,0.18,0.15,Sin mucho para decir.
+1670,10,7,2026-06-24 17:30,0.34,0.2,Me sentí con energía y participé en clase.
+1671,24,7,2026-06-25 08:45,0.04,-0.0,Normal.
+1672,6,3,2026-06-25 09:30,-0.1,0.35,Me puse nervioso con la prueba.
+1673,11,8,2026-06-25 10:15,-0.19,0.04,Sin mucho para decir.
+1674,28,4,2026-06-25 10:15,0.28,-0.24,"Día común, ni bien ni mal."
+1675,6,8,2026-06-25 10:45,-0.02,0.21,Normal.
+1676,4,3,2026-06-25 11:30,-0.5,-0.41,No tenía ganas de nada hoy.
+1677,30,5,2026-06-25 11:45,-0.26,-0.81,"Preferí estar solo, no quería hablar."
+1678,14,7,2026-06-25 12:00,0.29,-0.22,"Día común, ni bien ni mal."
+1679,17,7,2026-06-25 12:00,-0.9,-0.49,Me cuesta todo últimamente.
+1680,18,8,2026-06-25 12:15,0.16,0.42,Me gustó la actividad de hoy.
+1681,17,1,2026-06-25 13:00,-0.85,-0.29,"Preferí estar solo, no quería hablar."
+1682,8,1,2026-06-25 13:15,0.09,0.02,Normal.
+1683,6,5,2026-06-25 15:00,0.15,0.16,"Día común, ni bien ni mal."
+1684,21,3,2026-06-25 15:15,0.31,0.41,Me gustó la actividad de hoy.
+1685,9,3,2026-06-25 15:45,0.11,-0.15,Normal.
+1686,12,8,2026-06-25 17:00,0.44,0.41,"Buen día, trabajé cómodo con el grupo."
+1687,19,3,2026-06-25 17:00,0.29,0.21,Normal.
+1688,25,1,2026-06-25 17:30,0.71,0.21,Me gustó la actividad de hoy.
+1689,5,5,2026-06-25 17:45,0.32,0.41,Me sentí con energía y participé en clase.
+1690,16,3,2026-06-26 08:00,0.09,-0.05,Normal.
+1691,28,6,2026-06-26 08:15,-0.03,0.18,Sin mucho para decir.
+1692,3,4,2026-06-26 10:15,0.54,0.52,Me gustó la actividad de hoy.
+1693,2,1,2026-06-26 10:45,0.5,-0.4,"Tranquilo, sin novedades."
+1694,2,1,2026-06-26 11:15,-0.14,0.38,Discutí con un compañero y quedé alterado.
+1695,15,4,2026-06-26 11:15,0.79,0.46,Me gustó la actividad de hoy.
+1696,9,6,2026-06-26 11:45,-0.01,0.29,Sin mucho para decir.
+1697,16,6,2026-06-26 12:30,0.27,-0.36,"Día normal, bastante calmado."
+1698,30,8,2026-06-26 12:45,-0.52,-0.43,Me cuesta todo últimamente.
+1699,20,7,2026-06-26 15:00,0.35,0.54,Me gustó la actividad de hoy.
+1700,2,4,2026-06-26 15:15,0.45,0.33,"Buen día, trabajé cómodo con el grupo."
+1701,3,2,2026-06-26 16:30,-0.41,0.26,Me puse nervioso con la prueba.
+1702,19,4,2026-06-26 16:30,0.42,0.35,Me sentí con energía y participé en clase.
+1703,12,6,2026-06-26 17:15,0.39,0.35,Me sentí con energía y participé en clase.
+1704,13,4,2026-06-27 09:00,0.34,0.32,Me gustó la actividad de hoy.
+1705,25,3,2026-06-27 09:15,0.38,0.7,Me gustó la actividad de hoy.
+1706,25,8,2026-06-27 10:15,0.56,0.22,"Buen día, trabajé cómodo con el grupo."
+1707,15,5,2026-06-27 11:30,0.3,0.15,Me gustó la actividad de hoy.
+1708,11,1,2026-06-27 12:30,-0.51,-0.36,Me cuesta todo últimamente.
+1709,23,6,2026-06-27 12:30,0.08,0.15,Sin mucho para decir.
+1710,13,3,2026-06-27 13:15,0.49,0.57,"Buen día, trabajé cómodo con el grupo."
+1711,30,2,2026-06-27 13:30,-0.62,-0.59,Me cuesta todo últimamente.
+1712,6,7,2026-06-27 13:45,0.23,-0.1,Normal.
+1713,30,4,2026-06-27 14:15,-0.39,-0.71,No tenía ganas de nada hoy.
+1714,10,3,2026-06-27 16:15,0.04,0.26,Normal.
+1715,30,8,2026-06-27 16:30,-0.84,-0.63,No tenía ganas de nada hoy.
+1716,8,1,2026-06-27 16:45,0.18,0.33,"Buen día, trabajé cómodo con el grupo."
+1717,12,4,2026-06-27 16:45,0.65,0.76,"Buen día, trabajé cómodo con el grupo."
+1718,18,6,2026-06-28 09:30,0.46,0.14,Me sentí con energía y participé en clase.
+1719,19,7,2026-06-28 09:30,0.45,0.35,"Buen día, trabajé cómodo con el grupo."
+1720,3,2,2026-06-28 10:30,-0.31,-0.07,Me sentí bastante bajoneado.
+1721,22,7,2026-06-28 10:30,1.0,-0.12,Me sentí en paz durante la jornada.
+1722,12,7,2026-06-28 11:00,0.06,0.35,Me sentí con energía y participé en clase.
+1723,24,6,2026-06-28 12:30,0.21,-0.04,Sin mucho para decir.
+1724,4,2,2026-06-28 14:30,-0.27,-0.35,Me cuesta todo últimamente.
+1725,18,6,2026-06-28 14:45,0.08,0.32,Me gustó la actividad de hoy.
+1726,28,6,2026-06-28 15:30,0.29,0.1,"Día común, ni bien ni mal."
+1727,21,6,2026-06-28 17:30,0.33,0.07,"Buen día, trabajé cómodo con el grupo."
+1728,29,3,2026-06-29 08:00,0.54,0.28,Me gustó la actividad de hoy.
+1729,6,8,2026-06-29 10:45,-0.41,0.25,Me frustré porque no me salían las cosas.
+1730,25,3,2026-06-29 11:45,0.14,0.46,Me gustó la actividad de hoy.
+1731,12,6,2026-06-29 12:00,0.45,0.75,Me sentí con energía y participé en clase.
+1732,10,3,2026-06-29 12:45,0.01,0.13,"Día común, ni bien ni mal."
+1733,29,4,2026-06-29 13:15,0.86,0.19,Me gustó la actividad de hoy.
+1734,2,7,2026-06-29 14:00,-0.23,0.19,Normal.
+1735,7,2,2026-06-29 15:00,0.65,0.34,"Buen día, trabajé cómodo con el grupo."
+1736,17,2,2026-06-29 15:15,-0.55,-1.0,Me sentí bastante bajoneado.
+1737,1,2,2026-06-29 16:00,-0.1,-0.09,Normal.
+1738,4,3,2026-06-29 16:30,-0.28,-0.8,"Preferí estar solo, no quería hablar."
+1739,14,4,2026-06-29 16:45,0.12,0.06,Normal.
+1740,14,3,2026-06-29 17:00,-0.07,0.26,Normal.
+1741,22,8,2026-06-29 17:30,-0.16,0.02,Normal.
+1742,5,2,2026-06-30 08:45,0.21,0.53,"Buen día, trabajé cómodo con el grupo."
+1743,26,8,2026-06-30 09:15,-0.08,0.35,Discutí con un compañero y quedé alterado.
+1744,11,1,2026-06-30 10:00,-0.79,-0.09,Me sentí bastante bajoneado.
+1745,16,3,2026-06-30 10:00,0.01,-0.18,Normal.
+1746,16,6,2026-06-30 10:45,-0.18,0.08,Normal.
+1747,3,1,2026-06-30 13:15,-0.18,0.01,Sin mucho para decir.
+1748,15,8,2026-06-30 14:30,0.7,0.3,"Buen día, trabajé cómodo con el grupo."
+1749,5,6,2026-06-30 16:15,0.45,0.24,Me sentí con energía y participé en clase.
+1750,9,1,2026-07-01 08:00,0.61,0.05,Me sentí con energía y participé en clase.
+1751,27,3,2026-07-01 08:30,0.43,0.39,Me sentí con energía y participé en clase.
+1752,8,4,2026-07-01 09:00,0.07,-0.04,Normal.
+1753,2,2,2026-07-01 12:00,0.22,-0.07,Normal.
+1754,28,1,2026-07-01 12:00,-0.47,0.24,Me frustré porque no me salían las cosas.
+1755,11,8,2026-07-01 12:15,-0.45,-0.14,Me cuesta todo últimamente.
+1756,22,3,2026-07-01 16:15,0.57,0.61,"Buen día, trabajé cómodo con el grupo."
+1757,23,8,2026-07-01 16:15,0.3,0.11,Me gustó la actividad de hoy.
+1758,22,7,2026-07-01 17:15,0.6,0.67,Me sentí con energía y participé en clase.
+1759,21,6,2026-07-02 10:00,0.48,0.14,Me gustó la actividad de hoy.
+1760,3,2,2026-07-02 10:45,0.68,0.12,Me sentí con energía y participé en clase.
+1761,19,1,2026-07-02 11:15,0.5,0.14,"Buen día, trabajé cómodo con el grupo."
+1762,6,6,2026-07-02 11:30,0.04,0.06,"Día común, ni bien ni mal."
+1763,20,2,2026-07-02 11:30,0.47,0.39,Me sentí con energía y participé en clase.
+1764,27,5,2026-07-02 11:30,0.38,0.41,Me sentí con energía y participé en clase.
+1765,20,5,2026-07-02 12:45,0.35,0.59,"Buen día, trabajé cómodo con el grupo."
+1766,18,5,2026-07-02 13:00,0.15,0.01,Normal.
+1767,7,3,2026-07-02 13:15,0.61,-0.04,"Día normal, bastante calmado."
+1768,28,3,2026-07-02 13:30,0.2,0.38,"Buen día, trabajé cómodo con el grupo."
+1769,4,4,2026-07-02 14:15,-0.23,-0.22,"Día común, ni bien ni mal."
+1770,5,2,2026-07-02 14:30,0.24,0.24,Sin mucho para decir.
+1771,30,1,2026-07-02 16:15,-0.65,-0.17,Me cuesta todo últimamente.
+1772,9,3,2026-07-02 16:45,0.1,-0.05,Normal.
+1773,21,4,2026-07-02 16:45,0.47,0.64,Me gustó la actividad de hoy.
+1774,26,2,2026-07-02 17:15,0.29,-0.15,"Día común, ni bien ni mal."
+1775,20,7,2026-07-02 17:45,0.53,-0.07,"Tranquilo, sin novedades."
+1776,29,4,2026-07-03 09:00,0.69,0.46,Me gustó la actividad de hoy.
+1777,2,6,2026-07-03 09:30,0.17,0.23,Normal.
+1778,3,8,2026-07-03 09:45,0.6,0.04,Me sentí con energía y participé en clase.
+1779,6,2,2026-07-03 09:45,0.34,-0.07,"Día normal, bastante calmado."
+1780,16,7,2026-07-03 10:00,0.01,-0.56,Me sentí en paz durante la jornada.
+1781,16,8,2026-07-03 10:45,0.43,0.11,Me sentí con energía y participé en clase.
+1782,8,8,2026-07-03 11:00,0.23,-0.34,Me sentí en paz durante la jornada.
+1783,24,5,2026-07-03 12:00,0.14,0.02,Normal.
+1784,4,2,2026-07-03 12:30,0.1,-0.62,"Día normal, bastante calmado."
+1785,12,2,2026-07-03 12:30,0.71,0.1,Me gustó la actividad de hoy.
+1786,25,3,2026-07-03 12:30,0.64,0.46,Me gustó la actividad de hoy.
+1787,1,5,2026-07-03 13:00,0.37,-0.19,"Día normal, bastante calmado."
+1788,18,8,2026-07-03 13:45,0.24,0.09,Sin mucho para decir.
+1789,17,6,2026-07-03 15:15,-0.51,-0.14,Me sentí bastante bajoneado.
+1790,2,1,2026-07-03 16:30,-0.23,0.03,"Día común, ni bien ni mal."
+1791,8,2,2026-07-03 16:45,-0.03,0.02,Normal.
+1792,25,8,2026-07-04 08:15,0.26,0.11,Sin mucho para decir.
+1793,29,8,2026-07-04 09:15,0.59,0.62,"Buen día, trabajé cómodo con el grupo."
+1794,8,1,2026-07-04 09:45,0.06,0.12,Sin mucho para decir.
+1795,30,5,2026-07-04 10:15,-0.59,-0.64,Me cuesta todo últimamente.
+1796,8,1,2026-07-04 11:00,0.27,0.07,Sin mucho para decir.
+1797,11,1,2026-07-04 11:30,-1.0,-0.58,Me cuesta todo últimamente.
+1798,20,2,2026-07-04 12:15,-0.14,0.26,Normal.
+1799,16,1,2026-07-04 12:30,0.28,-0.1,Normal.
+1800,17,7,2026-07-04 14:00,-0.4,-0.66,"Preferí estar solo, no quería hablar."
+1801,16,8,2026-07-04 14:15,-0.24,0.0,Sin mucho para decir.
+1802,6,3,2026-07-04 14:30,0.63,-0.02,"Tranquilo, sin novedades."
+1803,11,4,2026-07-04 15:00,-0.51,0.1,Me puse nervioso con la prueba.
+1804,20,1,2026-07-04 15:00,0.49,0.42,"Buen día, trabajé cómodo con el grupo."
+1805,26,4,2026-07-04 15:00,0.08,-0.2,Normal.
+1806,30,2,2026-07-04 15:30,-1.0,-0.37,"Preferí estar solo, no quería hablar."
+1807,4,4,2026-07-04 17:30,-0.33,-0.26,No tenía ganas de nada hoy.
+1808,9,1,2026-07-05 09:15,-0.33,0.28,Me puse nervioso con la prueba.
+1809,18,4,2026-07-05 09:30,0.27,-0.11,"Día común, ni bien ni mal."
+1810,20,8,2026-07-05 11:30,0.61,0.28,Me gustó la actividad de hoy.
+1811,24,1,2026-07-05 12:00,-0.05,-0.09,Normal.
+1812,30,6,2026-07-05 12:15,-0.93,-0.65,Me cuesta todo últimamente.
+1813,5,2,2026-07-05 13:15,0.65,0.13,Me gustó la actividad de hoy.
+1814,27,5,2026-07-05 13:15,0.57,0.19,Me gustó la actividad de hoy.
+1815,22,3,2026-07-05 14:15,-0.11,-0.55,"Preferí estar solo, no quería hablar."
+1816,16,1,2026-07-05 16:00,-0.06,-0.22,Normal.
+1817,19,2,2026-07-05 16:00,0.36,0.19,Me sentí con energía y participé en clase.
+1818,25,1,2026-07-05 16:45,0.39,0.15,"Buen día, trabajé cómodo con el grupo."
+1819,7,1,2026-07-05 17:30,-0.02,0.33,Me puse nervioso con la prueba.
+1820,23,4,2026-07-06 13:45,0.63,0.56,Me gustó la actividad de hoy.
+1821,10,6,2026-07-06 15:00,0.19,0.2,Sin mucho para decir.
+1822,18,1,2026-07-06 15:45,-0.24,0.28,Normal.
+1823,2,2,2026-07-06 17:30,0.39,0.19,Me gustó la actividad de hoy.
+1824,12,4,2026-07-06 17:30,0.28,0.4,"Buen día, trabajé cómodo con el grupo."
+1825,11,3,2026-07-06 17:45,-0.35,-0.67,Me sentí bastante bajoneado.
+1826,2,6,2026-07-07 08:15,0.12,0.11,Sin mucho para decir.
+1827,4,4,2026-07-07 09:00,-0.4,-0.36,Me sentí bastante bajoneado.
+1828,25,6,2026-07-07 10:15,0.47,0.22,Me sentí con energía y participé en clase.
+1829,21,1,2026-07-07 11:00,0.53,0.26,Me gustó la actividad de hoy.
+1830,28,1,2026-07-07 13:15,0.44,-0.11,Me sentí en paz durante la jornada.
+1831,4,7,2026-07-07 13:30,-0.17,-0.35,"Preferí estar solo, no quería hablar."
+1832,2,5,2026-07-07 14:15,0.07,0.16,Sin mucho para decir.
+1833,22,8,2026-07-07 14:30,0.11,-0.44,Me sentí en paz durante la jornada.
+1834,21,1,2026-07-07 16:30,0.34,0.21,"Buen día, trabajé cómodo con el grupo."
+1835,10,8,2026-07-07 17:15,0.43,-0.07,"Tranquilo, sin novedades."
+1836,5,2,2026-07-07 17:45,0.37,0.38,"Buen día, trabajé cómodo con el grupo."
+1837,6,3,2026-07-07 17:45,0.01,0.21,Normal.
+1838,29,4,2026-07-08 08:15,0.38,0.31,"Buen día, trabajé cómodo con el grupo."
+1839,8,5,2026-07-08 08:45,0.25,0.22,Normal.
+1840,21,3,2026-07-08 09:00,0.39,0.28,Me sentí con energía y participé en clase.
+1841,3,1,2026-07-08 09:15,0.45,0.34,"Buen día, trabajé cómodo con el grupo."
+1842,27,2,2026-07-08 10:15,0.63,0.62,"Buen día, trabajé cómodo con el grupo."
+1843,1,6,2026-07-08 11:15,0.01,0.35,Me sentí con energía y participé en clase.
+1844,17,6,2026-07-08 12:00,-0.81,-0.62,Me cuesta todo últimamente.
+1845,6,2,2026-07-08 12:30,-0.23,-0.2,"Día común, ni bien ni mal."
+1846,18,4,2026-07-08 12:45,-0.14,-0.29,Normal.
+1847,12,6,2026-07-08 13:00,0.49,0.33,Me sentí con energía y participé en clase.
+1848,24,5,2026-07-08 13:30,-0.07,0.02,"Día común, ni bien ni mal."
+1849,3,1,2026-07-08 14:30,0.47,0.03,Me gustó la actividad de hoy.
+1850,14,4,2026-07-08 14:45,0.55,0.34,"Buen día, trabajé cómodo con el grupo."
+1851,3,7,2026-07-08 17:15,0.68,0.64,"Buen día, trabajé cómodo con el grupo."
+1852,19,6,2026-07-08 17:30,0.17,0.26,Sin mucho para decir.
+1853,9,8,2026-07-08 17:45,-0.18,0.05,"Día común, ni bien ni mal."
+1854,15,2,2026-07-08 17:45,0.48,0.5,Me sentí con energía y participé en clase.
+1855,26,2,2026-07-09 08:30,0.08,0.02,Sin mucho para decir.
+1856,18,7,2026-07-09 09:15,0.18,0.24,Sin mucho para decir.
+1857,22,6,2026-07-09 09:15,0.63,0.39,Me sentí con energía y participé en clase.
+1858,29,6,2026-07-09 09:15,0.41,0.24,"Buen día, trabajé cómodo con el grupo."
+1859,12,4,2026-07-09 12:00,0.46,0.18,Me gustó la actividad de hoy.
+1860,1,2,2026-07-09 12:15,0.11,0.06,Normal.
+1861,22,4,2026-07-09 12:15,0.94,-0.13,"Tranquilo, sin novedades."
+1862,4,2,2026-07-09 12:45,-0.64,-0.58,Me sentí bastante bajoneado.
+1863,28,5,2026-07-09 12:45,-0.15,-0.02,Normal.
+1864,6,5,2026-07-09 13:45,-0.12,0.13,Normal.
+1865,2,7,2026-07-09 14:30,0.31,-0.1,Me sentí en paz durante la jornada.
+1866,28,2,2026-07-09 15:30,-0.1,-0.29,Normal.
+1867,16,6,2026-07-09 17:15,0.28,-0.15,Normal.
+1868,14,2,2026-07-10 08:15,0.08,0.56,"Buen día, trabajé cómodo con el grupo."
+1869,13,2,2026-07-10 09:30,0.11,0.14,Sin mucho para decir.
+1870,3,5,2026-07-10 11:15,0.37,0.16,Me gustó la actividad de hoy.
+1871,12,3,2026-07-10 11:15,0.12,0.7,Me sentí con energía y participé en clase.
+1872,13,1,2026-07-10 13:00,0.37,-0.04,"Tranquilo, sin novedades."
+1873,15,5,2026-07-10 13:30,0.19,0.33,Me gustó la actividad de hoy.
+1874,30,7,2026-07-10 13:30,-0.71,-0.48,Me sentí bastante bajoneado.
+1875,8,7,2026-07-10 14:30,-0.22,0.25,Sin mucho para decir.
+1876,7,1,2026-07-10 15:30,0.4,0.59,Me sentí con energía y participé en clase.
+1877,23,5,2026-07-10 16:00,0.58,0.08,"Buen día, trabajé cómodo con el grupo."
+1878,25,7,2026-07-10 16:15,0.25,0.38,Me gustó la actividad de hoy.
+1879,5,6,2026-07-10 17:45,0.61,0.37,Me sentí con energía y participé en clase.
+1880,6,8,2026-07-11 08:15,0.03,0.21,Normal.
+1881,9,5,2026-07-11 08:30,0.28,0.05,"Día común, ni bien ni mal."
+1882,26,8,2026-07-11 09:00,-0.22,-0.22,Normal.
+1883,18,3,2026-07-11 10:15,0.12,0.01,Normal.
+1884,12,2,2026-07-11 10:30,0.64,0.33,Me sentí con energía y participé en clase.
+1885,3,4,2026-07-11 11:30,0.05,0.94,"Buen día, trabajé cómodo con el grupo."
+1886,2,2,2026-07-11 11:45,0.14,-0.07,Sin mucho para decir.
+1887,21,2,2026-07-11 11:45,0.5,0.63,"Buen día, trabajé cómodo con el grupo."
+1888,21,4,2026-07-11 12:00,0.44,0.4,Me gustó la actividad de hoy.
+1889,11,3,2026-07-11 12:15,-0.13,-0.52,Me sentí bastante bajoneado.
+1890,17,3,2026-07-11 13:15,-0.74,-0.89,No tenía ganas de nada hoy.
+1891,4,4,2026-07-11 15:00,-0.36,-0.35,No tenía ganas de nada hoy.
+1892,19,6,2026-07-11 16:30,0.38,0.4,Me sentí con energía y participé en clase.
+1893,30,1,2026-07-11 17:00,-0.88,-1.0,Me sentí bastante bajoneado.
+1894,20,6,2026-07-12 08:00,0.6,0.51,"Buen día, trabajé cómodo con el grupo."
+1895,18,5,2026-07-12 08:15,-0.36,0.01,Me puse nervioso con la prueba.
+1896,22,1,2026-07-12 08:45,-0.02,0.24,Sin mucho para decir.
+1897,14,6,2026-07-12 10:30,0.71,0.47,Me gustó la actividad de hoy.
+1898,14,1,2026-07-12 11:15,0.71,1.0,"Buen día, trabajé cómodo con el grupo."
+1899,3,2,2026-07-12 12:15,0.4,0.38,Me sentí con energía y participé en clase.
+1900,4,6,2026-07-12 13:00,-0.49,-0.17,"Preferí estar solo, no quería hablar."
+1901,17,5,2026-07-12 13:00,-0.83,-0.76,Me cuesta todo últimamente.
+1902,5,3,2026-07-12 13:30,0.3,0.19,Me sentí con energía y participé en clase.
+1903,7,2,2026-07-12 13:30,0.26,0.49,"Buen día, trabajé cómodo con el grupo."
+1904,12,1,2026-07-12 14:00,0.52,0.39,"Buen día, trabajé cómodo con el grupo."
+1905,30,7,2026-07-12 15:30,-0.92,-0.27,No tenía ganas de nada hoy.
+1906,5,2,2026-07-12 17:15,0.56,0.43,Me sentí con energía y participé en clase.
+1907,20,7,2026-07-12 17:45,0.72,0.3,Me gustó la actividad de hoy.
+1908,27,8,2026-07-12 17:45,0.58,0.19,"Buen día, trabajé cómodo con el grupo."
+1909,3,5,2026-07-13 08:15,-0.29,0.36,Discutí con un compañero y quedé alterado.
+1910,16,7,2026-07-13 08:15,0.02,0.23,Sin mucho para decir.
+1911,2,5,2026-07-13 09:15,-0.21,0.02,"Día común, ni bien ni mal."
+1912,22,3,2026-07-13 09:45,0.26,0.78,Me gustó la actividad de hoy.
+1913,8,1,2026-07-13 11:00,0.1,0.25,Normal.
+1914,15,4,2026-07-13 11:15,0.36,-0.02,"Tranquilo, sin novedades."
+1915,2,6,2026-07-13 11:45,0.09,0.05,Sin mucho para decir.
+1916,12,7,2026-07-13 12:30,0.4,0.27,Me gustó la actividad de hoy.
+1917,15,5,2026-07-13 13:30,0.5,0.39,Me gustó la actividad de hoy.
+1918,6,3,2026-07-13 14:00,0.13,0.37,Me gustó la actividad de hoy.
+1919,29,8,2026-07-13 15:30,0.41,0.43,Me sentí con energía y participé en clase.
+1920,11,2,2026-07-13 17:30,-0.71,-0.09,Me sentí bastante bajoneado.
+1921,16,7,2026-07-14 08:00,-0.0,0.09,Sin mucho para decir.
+1922,24,1,2026-07-14 08:15,-0.15,-0.09,Sin mucho para decir.
+1923,6,6,2026-07-14 09:15,-0.1,0.12,Sin mucho para decir.
+1924,8,6,2026-07-14 09:15,0.43,-0.3,"Tranquilo, sin novedades."
+1925,29,2,2026-07-14 09:30,0.26,0.45,"Buen día, trabajé cómodo con el grupo."
+1926,9,2,2026-07-14 10:00,-0.34,0.04,Discutí con un compañero y quedé alterado.
+1927,30,2,2026-07-14 12:30,-1.0,-0.36,Me sentí bastante bajoneado.
+1928,28,6,2026-07-14 13:00,-0.24,0.29,"Día común, ni bien ni mal."
+1929,10,6,2026-07-14 13:45,0.12,0.07,Sin mucho para decir.
+1930,19,5,2026-07-14 14:00,0.52,0.81,Me sentí con energía y participé en clase.
+1931,16,2,2026-07-14 15:15,0.34,-0.05,"Día normal, bastante calmado."
+1932,18,3,2026-07-14 15:15,0.05,-0.2,Normal.
+1933,13,3,2026-07-14 15:30,0.52,0.43,Me gustó la actividad de hoy.
+1934,25,6,2026-07-14 17:30,0.16,0.01,Sin mucho para decir.
+1935,5,6,2026-07-14 17:45,0.69,0.27,Me gustó la actividad de hoy.
+1936,16,2,2026-07-14 17:45,0.14,-0.03,Sin mucho para decir.
+1937,1,8,2026-07-15 08:30,-0.27,-0.04,"Día común, ni bien ni mal."
+1938,18,2,2026-07-15 08:30,-0.12,0.03,"Día común, ni bien ni mal."
+1939,13,5,2026-07-15 09:30,0.38,0.1,"Buen día, trabajé cómodo con el grupo."
+1940,8,1,2026-07-15 10:15,0.22,0.3,Me sentí con energía y participé en clase.
+1941,24,2,2026-07-15 11:15,0.37,-0.1,"Día normal, bastante calmado."
+1942,25,3,2026-07-15 11:30,0.45,0.06,"Buen día, trabajé cómodo con el grupo."
+1943,28,4,2026-07-15 11:30,-0.01,-0.04,"Día común, ni bien ni mal."
+1944,4,1,2026-07-15 14:30,-0.8,-0.8,"Preferí estar solo, no quería hablar."
+1945,12,8,2026-07-15 14:30,0.79,0.17,Me gustó la actividad de hoy.
+1946,21,1,2026-07-15 14:30,0.47,0.29,Me gustó la actividad de hoy.
+1947,2,2,2026-07-15 15:15,-0.21,0.17,Sin mucho para decir.
+1948,23,8,2026-07-15 16:00,0.47,0.41,Me gustó la actividad de hoy.
+1949,22,4,2026-07-15 17:30,0.26,0.26,Normal.
+1950,23,6,2026-07-16 12:45,0.29,-0.04,Sin mucho para decir.
+1951,25,2,2026-07-16 13:00,0.63,0.26,Me gustó la actividad de hoy.
+1952,30,4,2026-07-16 13:00,-0.8,-0.45,Me cuesta todo últimamente.
+1953,22,7,2026-07-16 13:15,0.44,-0.15,"Día normal, bastante calmado."
+1954,7,6,2026-07-16 13:45,0.11,0.51,Me sentí con energía y participé en clase.
+1955,28,5,2026-07-16 16:00,0.04,0.06,"Día común, ni bien ni mal."
+1956,4,3,2026-07-16 16:45,-0.72,-0.28,Me cuesta todo últimamente.
+1957,8,7,2026-07-16 16:45,0.34,0.02,Me sentí con energía y participé en clase.
+1958,3,8,2026-07-16 17:30,0.36,0.48,Me sentí con energía y participé en clase.
+1959,25,8,2026-07-16 17:45,0.44,0.43,Me gustó la actividad de hoy.
+1960,11,5,2026-07-17 08:30,-0.44,-0.85,Me sentí bastante bajoneado.
+1961,27,6,2026-07-17 11:15,0.64,0.37,"Buen día, trabajé cómodo con el grupo."
+1962,26,6,2026-07-17 11:45,0.15,-0.1,Normal.
+1963,1,1,2026-07-17 12:15,0.26,0.19,"Día común, ni bien ni mal."
+1964,29,1,2026-07-17 13:30,0.52,0.41,Me sentí con energía y participé en clase.
+1965,6,3,2026-07-17 15:00,0.29,0.29,"Día común, ni bien ni mal."
+1966,20,8,2026-07-17 16:30,0.58,0.2,Me sentí con energía y participé en clase.
+1967,10,5,2026-07-17 17:15,-0.11,0.4,Me frustré porque no me salían las cosas.
+1968,11,5,2026-07-18 09:45,-0.77,-0.64,"Preferí estar solo, no quería hablar."
+1969,12,3,2026-07-18 10:00,0.65,0.58,"Buen día, trabajé cómodo con el grupo."
+1970,12,1,2026-07-18 10:30,0.11,0.43,Me sentí con energía y participé en clase.
+1971,29,7,2026-07-18 10:45,0.18,0.31,Me gustó la actividad de hoy.
+1972,8,2,2026-07-18 11:15,-0.23,0.23,"Día común, ni bien ni mal."
+1973,4,6,2026-07-18 13:15,-0.64,-0.52,No tenía ganas de nada hoy.
+1974,28,3,2026-07-18 13:45,-0.02,0.32,Discutí con un compañero y quedé alterado.
+1975,1,3,2026-07-18 15:00,0.48,-0.32,"Tranquilo, sin novedades."
+1976,29,7,2026-07-18 15:00,0.61,0.29,"Buen día, trabajé cómodo con el grupo."
+1977,25,2,2026-07-18 17:15,0.69,0.4,Me gustó la actividad de hoy.
+1978,14,2,2026-07-18 17:45,-0.64,0.1,Me frustré porque no me salían las cosas.
+1979,13,7,2026-07-19 10:00,0.35,0.61,Me gustó la actividad de hoy.
+1980,20,1,2026-07-19 12:00,0.38,0.52,Me gustó la actividad de hoy.
+1981,23,1,2026-07-19 12:15,0.58,0.0,Me sentí con energía y participé en clase.
+1982,1,4,2026-07-19 12:45,-0.19,-0.4,Me sentí bastante bajoneado.
+1983,4,1,2026-07-19 13:15,-0.99,-0.7,"Preferí estar solo, no quería hablar."
+1984,2,7,2026-07-19 14:45,-0.17,0.21,"Día común, ni bien ni mal."
+1985,11,3,2026-07-19 14:45,-0.48,-0.31,"Preferí estar solo, no quería hablar."
+1986,30,1,2026-07-19 15:15,-0.86,-0.99,Me cuesta todo últimamente.
+1987,4,3,2026-07-19 16:30,-0.53,-0.58,No tenía ganas de nada hoy.
+1988,18,3,2026-07-19 16:45,0.02,0.12,Normal.
+1989,21,2,2026-07-19 16:45,0.32,0.16,Me gustó la actividad de hoy.
+1990,4,2,2026-07-19 17:15,-0.41,-0.41,Me sentí bastante bajoneado.
+1991,16,8,2026-07-20 08:15,-0.16,-0.42,"Preferí estar solo, no quería hablar."
+1992,28,6,2026-07-20 08:30,0.23,-0.12,Sin mucho para decir.
+1993,26,5,2026-07-20 09:00,0.13,-0.24,"Día común, ni bien ni mal."
+1994,6,6,2026-07-20 10:15,0.35,0.16,Me gustó la actividad de hoy.
+1995,23,8,2026-07-20 10:45,-0.13,0.26,Sin mucho para decir.
+1996,25,5,2026-07-20 11:30,0.18,0.31,Me sentí con energía y participé en clase.
+1997,6,4,2026-07-20 12:45,-0.11,0.23,Normal.
+1998,15,7,2026-07-20 12:45,0.66,0.38,"Buen día, trabajé cómodo con el grupo."
+1999,20,1,2026-07-20 12:45,0.59,0.03,Me gustó la actividad de hoy.
+2000,16,6,2026-07-20 13:30,0.11,-0.11,Normal.
+2001,17,5,2026-07-20 13:30,-0.86,-0.57,Me sentí bastante bajoneado.
+2002,20,2,2026-07-20 15:15,0.31,0.18,"Buen día, trabajé cómodo con el grupo."
+2003,5,1,2026-07-20 15:45,0.65,0.42,Me sentí con energía y participé en clase.
+2004,7,3,2026-07-20 16:30,0.2,0.55,Me sentí con energía y participé en clase.
+2005,7,3,2026-07-20 17:00,0.14,0.34,Me sentí con energía y participé en clase.
+2006,8,4,2026-07-20 17:30,0.24,-0.28,Sin mucho para decir.
+2007,24,7,2026-07-21 08:00,0.03,-0.02,Sin mucho para decir.
+2008,2,2,2026-07-21 08:15,0.21,-0.27,Sin mucho para decir.
+2009,6,6,2026-07-21 09:30,-0.35,0.19,Discutí con un compañero y quedé alterado.
+2010,6,3,2026-07-21 11:00,-0.01,0.53,Me puse nervioso con la prueba.
+2011,12,2,2026-07-21 12:15,0.53,0.21,Me sentí con energía y participé en clase.
+2012,3,8,2026-07-21 12:45,-0.12,0.26,"Día común, ni bien ni mal."
+2013,10,7,2026-07-21 13:15,-0.17,-0.15,Sin mucho para decir.
+2014,16,2,2026-07-21 13:45,-0.18,-0.06,"Día común, ni bien ni mal."
+2015,5,5,2026-07-21 15:30,0.37,0.53,Me gustó la actividad de hoy.
+2016,3,5,2026-07-21 16:45,0.82,0.36,Me sentí con energía y participé en clase.
+2017,14,6,2026-07-21 16:45,0.32,0.13,"Buen día, trabajé cómodo con el grupo."
+2018,9,4,2026-07-21 17:15,0.46,0.28,"Buen día, trabajé cómodo con el grupo."
+2019,10,6,2026-07-21 17:15,0.01,0.38,"Buen día, trabajé cómodo con el grupo."
+2020,11,8,2026-07-22 08:00,-0.88,-0.4,"Preferí estar solo, no quería hablar."
+2021,27,7,2026-07-22 10:00,0.12,0.17,"Día común, ni bien ni mal."
+2022,25,3,2026-07-22 10:45,0.52,0.33,Me sentí con energía y participé en clase.
+2023,9,5,2026-07-22 12:30,0.06,0.13,Sin mucho para decir.
+2024,12,8,2026-07-22 13:15,0.27,0.39,"Buen día, trabajé cómodo con el grupo."
+2025,13,3,2026-07-22 13:15,0.72,0.3,"Buen día, trabajé cómodo con el grupo."
+2026,21,4,2026-07-22 14:15,0.69,0.52,Me gustó la actividad de hoy.
+2027,15,3,2026-07-22 14:30,0.56,0.05,Me gustó la actividad de hoy.
+2028,24,5,2026-07-22 15:30,0.1,0.29,Sin mucho para decir.
+2029,22,2,2026-07-22 16:00,-0.28,-0.2,Sin mucho para decir.
+2030,2,8,2026-07-22 16:30,0.26,0.23,Normal.
+2031,17,2,2026-07-22 16:45,-0.86,-0.82,"Preferí estar solo, no quería hablar."
+2032,18,4,2026-07-22 17:00,-0.1,-0.41,Me cuesta todo últimamente.
+2033,19,8,2026-07-22 17:30,0.6,-0.08,"Día normal, bastante calmado."
+2034,8,1,2026-07-23 08:15,-0.1,-0.08,Sin mucho para decir.
+2035,5,8,2026-07-23 09:45,0.35,0.46,Me gustó la actividad de hoy.
+2036,28,4,2026-07-23 09:45,0.47,0.26,"Buen día, trabajé cómodo con el grupo."
+2037,22,2,2026-07-23 11:15,0.46,0.12,Me sentí con energía y participé en clase.
+2038,3,1,2026-07-23 13:30,-0.45,-0.26,No tenía ganas de nada hoy.
+2039,21,3,2026-07-23 14:00,0.21,0.23,"Día común, ni bien ni mal."
+2040,26,6,2026-07-23 17:15,0.02,-0.13,"Día común, ni bien ni mal."
+2041,8,5,2026-07-24 08:15,-0.15,0.15,"Día común, ni bien ni mal."
+2042,22,6,2026-07-24 08:45,0.51,-0.06,"Día normal, bastante calmado."
+2043,25,7,2026-07-24 09:00,0.19,0.27,"Día común, ni bien ni mal."
+2044,30,5,2026-07-24 09:15,-0.97,-1.0,No tenía ganas de nada hoy.
+2045,16,4,2026-07-24 09:30,0.37,0.11,Me gustó la actividad de hoy.
+2046,2,4,2026-07-24 09:45,0.3,0.32,Me sentí con energía y participé en clase.
+2047,18,3,2026-07-24 10:30,-0.22,-0.18,Normal.
+2048,19,8,2026-07-24 13:45,0.17,0.23,Normal.
+2049,29,2,2026-07-24 14:15,0.31,0.3,"Buen día, trabajé cómodo con el grupo."
+2050,18,4,2026-07-24 15:15,-0.56,0.27,Me frustré porque no me salían las cosas.
+2051,30,7,2026-07-24 15:45,-0.9,-0.62,"Preferí estar solo, no quería hablar."
+2052,27,7,2026-07-24 16:00,0.65,0.4,Me gustó la actividad de hoy.
+2053,30,8,2026-07-24 16:30,-1.0,-0.49,No tenía ganas de nada hoy.
+2054,3,5,2026-07-24 17:00,0.28,0.76,Me gustó la actividad de hoy.
+2055,22,6,2026-07-24 17:45,1.0,-0.29,"Día normal, bastante calmado."

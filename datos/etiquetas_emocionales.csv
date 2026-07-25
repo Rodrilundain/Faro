@@ -1,0 +1,9 @@
+id_etiqueta,nombre_etiqueta,valencia_min,valencia_max,activacion_min,activacion_max,cuadrante
+1,Entusiasta,0.30,1.00,0.30,1.00,Positiva-Alta
+2,Calmo,0.30,1.00,-1.00,0.29,Positiva-Baja
+3,Frustrado,-1.00,-0.30,0.30,1.00,Negativa-Alta
+4,Triste,-1.00,-0.30,-1.00,0.29,Negativa-Baja
+5,Tenso,-0.29,0.29,0.60,1.00,Neutra-Alta
+6,Alerta,-0.29,0.29,0.30,0.59,Neutra-Media-Alta
+7,Neutro,-0.29,0.29,-0.29,0.29,Centro
+8,Cansado,-0.29,0.29,-1.00,-0.30,Neutra-Baja

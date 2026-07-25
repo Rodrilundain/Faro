@@ -1,0 +1,3 @@
+# Configuración del origen del CSV de registros emocionales.
+# Puede ser una ruta local o una URL http/https directa a un archivo .csv.
+origen_csv=datos/registros_emocionales.csv

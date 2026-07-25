@@ -1,0 +1,20 @@
+# --- Artefactos de Python ---
+__pycache__/
+*.pyc
+
+# --- Salidas generadas por el pipeline (se recrean con ejecutar_pipeline.py) ---
+salida/
+graficos/
+resultados.txt
+
+# --- Sitio estático ---
+# NOTA: sitio/ SÍ se versiona a propósito, porque Netlify publica esa carpeta
+# directamente desde GitHub (publish = "sitio" en netlify.toml). Se regenera con
+# 'python exportar_sitio.py'; acordate de commitear los cambios cuando actualices datos.
+
+# --- Entorno / editor ---
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store

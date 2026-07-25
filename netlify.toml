@@ -1,0 +1,13 @@
+# Configuración de despliegue en Netlify.
+# El sitio es 100% estático y ya viene generado en la carpeta 'sitio/',
+# así que Netlify solo tiene que publicar ese directorio (sin build).
+[build]
+  publish = "sitio"
+  command = ""
+
+# Cabeceras de seguridad básicas para el sitio publicado.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
