@@ -107,6 +107,12 @@ Genera `salida/*.csv`, `graficos/*.png` y el log `resultados.txt`. Si tenés
 MySQL/XAMPP con la base `faro` (ver `faro_schema.sql`), lee las tablas de
 referencia desde ahí; si no, cae automáticamente a los CSV de `datos/`.
 
+Para volcar los registros del CSV dentro de la tabla `registros_emocionales` de
+MySQL (idempotente, se puede correr las veces que quieras):
+```bash
+python cargar_registros_mysql.py
+```
+
 ---
 
 ## El sitio web (tres páginas)
@@ -141,6 +147,7 @@ FARO/
 ├── buscar_resultados.py        # Buscador del log (consola)
 ├── exportar_sitio.py           # Genera sitio/ para Netlify
 ├── generar_datos_ejemplo.py    # Generador determinista de datos
+├── cargar_registros_mysql.py   # Carga el CSV de registros a la tabla MySQL
 ├── config.txt · faro_schema.sql · requirements.txt
 ├── README.md · PROTOCOLO_INTERVENCION.md
 │
