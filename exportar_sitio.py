@@ -38,6 +38,7 @@ def construir_referencia():
     """Arma el objeto de referencia (etiquetas y estudiantes) para el JS."""
     etiquetas = pd.read_csv(DATOS_DIR / "etiquetas_emocionales.csv", encoding="utf-8")
     estudiantes = pd.read_csv(DATOS_DIR / "estudiantes.csv", encoding="utf-8")
+    contextos = pd.read_csv(DATOS_DIR / "contextos.csv", encoding="utf-8")
 
     ref_etiquetas = [
         {
@@ -59,7 +60,15 @@ def construir_referencia():
         }
         for _, r in estudiantes.iterrows()
     ]
-    return {"etiquetas": ref_etiquetas, "estudiantes": ref_estudiantes}
+    ref_contextos = [
+        {
+            "id_contexto": int(r["id_contexto"]),
+            "ambito": r["ambito"] if pd.notna(r["ambito"]) else "",
+            "situacion": r["situacion"] if pd.notna(r["situacion"]) else "",
+        }
+        for _, r in contextos.iterrows()
+    ]
+    return {"etiquetas": ref_etiquetas, "estudiantes": ref_estudiantes, "contextos": ref_contextos}
 
 
 def exportar():
@@ -70,6 +79,7 @@ def exportar():
 
     # 1) Páginas (renombrando carga.html -> index.html)
     shutil.copyfile(WEB_DIR / "carga.html", SITIO_DIR / "index.html")
+    shutil.copyfile(WEB_DIR / "nuevo.html", SITIO_DIR / "nuevo.html")
     shutil.copyfile(WEB_DIR / "panel.html", SITIO_DIR / "panel.html")
 
     # 2) Assets JS/CSS

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FARO · Cargar datos</title>
+<title>FARO · Cargar CSV / URL</title>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -11,7 +11,8 @@
   <span class="logo">🔦 FARO</span>
   <span class="sub">Sistema de alerta temprana de bienestar estudiantil</span>
   <nav>
-    <a href="index.html" class="activo">Cargar datos</a>
+    <a href="index.html" class="activo">Cargar CSV/URL</a>
+    <a href="nuevo.html">Cargar registros</a>
     <a href="panel.html">Panel</a>
   </nav>
 </header>
@@ -37,7 +38,7 @@
   </div>
 
   <div class="card">
-    <h2><span class="paso-num">B</span>Subir tu propio CSV</h2>
+    <h2><span class="paso-num">B</span>Subir un archivo CSV</h2>
     <p class="muted">Columnas requeridas:
       <code>id_registro, id_estudiante, id_contexto, fecha_hora, valencia, activacion, comentario</code>.
       Valencia y activación entre −1 y 1. Fecha en formato <code>AAAA-MM-DD HH:MM</code>.</p>
@@ -46,8 +47,21 @@
       <p><strong>Arrastrá tu archivo .csv acá</strong> o hacé clic para elegirlo.</p>
       <input type="file" id="archivo" accept=".csv,text/csv" style="display:none">
     </div>
-    <div id="resultadoCarga"></div>
   </div>
+
+  <div class="card">
+    <h2><span class="paso-num">C</span>Cargar desde una URL</h2>
+    <p class="muted">Pegá el enlace directo a un archivo <code>.csv</code> (por ejemplo, un CSV
+      publicado en Google Sheets o un archivo <em>raw</em> de GitHub).</p>
+    <div class="filtros">
+      <input type="text" id="url" placeholder="https://…/registros.csv" style="flex:1;min-width:260px">
+      <button class="btn" id="btnUrl">Cargar desde URL</button>
+    </div>
+    <p class="muted">Si falla, suele ser porque el servidor del CSV no permite el acceso desde otro
+      sitio (CORS). En ese caso, descargá el archivo y usá la opción B.</p>
+  </div>
+
+  <div id="resultadoCarga"></div>
 </main>
 
 <footer>FARO · datos sintéticos de ejemplo · el uso real requiere consentimiento y marco institucional.</footer>
@@ -61,11 +75,44 @@
     location.href = "panel.html";
   }
 
+  function tarjeta(v, k) {
+    return '<div class="metrica"><div class="v">' + v + '</div><div class="k">' + k + '</div></div>';
+  }
+
+  function mostrarResumen(res, origen) {
+    var c = res.conteo_nivel;
+    document.getElementById("resultadoCarga").innerHTML =
+      '<div class="card"><h2>Datos procesados</h2>' +
+        '<div class="resumen-carga">' +
+          tarjeta(res.n_validos, "registros válidos") +
+          tarjeta(res.n_invalidos, "inválidos") +
+          tarjeta(res.estudiantes.length, "estudiantes") +
+          tarjeta((c.Rojo || 0) + (c.Naranja || 0), "en alerta (Rojo+Naranja)") +
+        '</div>' +
+        '<p><strong>Origen:</strong> ' + origen + '</p>' +
+        '<button class="btn" id="btnVer">Ver panel de riesgo →</button></div>';
+    document.getElementById("btnVer").onclick = function () { guardarEirAlPanel(res, origen); };
+    document.getElementById("resultadoCarga").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function procesarTexto(texto, origen) {
+    var res;
+    try { res = FARO.construirResultado(texto, window.FARO_REF); }
+    catch (err) {
+      document.getElementById("resultadoCarga").innerHTML =
+        '<div class="card"><div class="senal">No se pudo procesar: ' + err.message + '</div></div>';
+      return;
+    }
+    mostrarResumen(res, origen);
+  }
+
+  // A) Ejemplo
   document.getElementById("btnEjemplo").onclick = function () {
     var res = FARO.construirResultado(window.FARO_EJEMPLO_CSV, window.FARO_REF);
     guardarEirAlPanel(res, "datos de ejemplo");
   };
 
+  // B) Archivo
   var dz = document.getElementById("dropzone");
   var input = document.getElementById("archivo");
   dz.onclick = function () { input.click(); };
@@ -73,38 +120,30 @@
   dz.ondragleave = function () { dz.classList.remove("hover"); };
   dz.ondrop = function (e) {
     e.preventDefault(); dz.classList.remove("hover");
-    if (e.dataTransfer.files.length) procesarArchivo(e.dataTransfer.files[0]);
+    if (e.dataTransfer.files.length) leerArchivo(e.dataTransfer.files[0]);
   };
-  input.onchange = function () { if (input.files.length) procesarArchivo(input.files[0]); };
-
-  function procesarArchivo(file) {
+  input.onchange = function () { if (input.files.length) leerArchivo(input.files[0]); };
+  function leerArchivo(file) {
     var lector = new FileReader();
-    lector.onload = function () {
-      var res;
-      try { res = FARO.construirResultado(lector.result, window.FARO_REF); }
-      catch (err) {
-        document.getElementById("resultadoCarga").innerHTML =
-          '<div class="senal">No se pudo procesar el archivo: ' + err.message + '</div>';
-        return;
-      }
-      var c = res.conteo_nivel;
-      document.getElementById("resultadoCarga").innerHTML =
-        '<div class="resumen-carga">' +
-          tarjeta(res.n_validos, "registros válidos") +
-          tarjeta(res.n_invalidos, "inválidos") +
-          tarjeta(res.estudiantes.length, "estudiantes") +
-          tarjeta((c.Rojo || 0) + (c.Naranja || 0), "en alerta (Rojo+Naranja)") +
-        '</div>' +
-        '<p><strong>' + file.name + '</strong> procesado correctamente.</p>' +
-        '<button class="btn" id="btnVer">Ver panel de riesgo →</button>';
-      document.getElementById("btnVer").onclick = function () { guardarEirAlPanel(res, file.name); };
-    };
+    lector.onload = function () { procesarTexto(lector.result, file.name); };
     lector.readAsText(file, "utf-8");
   }
 
-  function tarjeta(v, k) {
-    return '<div class="metrica"><div class="v">' + v + '</div><div class="k">' + k + '</div></div>';
-  }
+  // C) URL
+  document.getElementById("btnUrl").onclick = function () {
+    var url = document.getElementById("url").value.trim();
+    if (!url) { return; }
+    document.getElementById("resultadoCarga").innerHTML =
+      '<div class="card"><p class="muted">Descargando desde la URL…</p></div>';
+    fetch(url)
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+      .then(function (texto) { procesarTexto(texto, url); })
+      .catch(function (err) {
+        document.getElementById("resultadoCarga").innerHTML =
+          '<div class="card"><div class="senal">No se pudo descargar el CSV (' + err.message +
+          '). Puede ser un problema de CORS: descargá el archivo y usá la opción B.</div></div>';
+      });
+  };
 </script>
 </body>
 </html>

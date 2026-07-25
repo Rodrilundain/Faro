@@ -109,17 +109,27 @@ referencia desde ahí; si no, cae automáticamente a los CSV de `datos/`.
 
 ---
 
-## El sitio web (dos páginas)
+## El sitio web (tres páginas)
 
-- **`index.html` — Cargar datos:** subir tu propio CSV (se procesa en el
-  navegador y muestra cuántos registros son válidos/ inválidos) o usar el dataset
-  de ejemplo.
+- **`index.html` — Cargar CSV:** subir tu propio CSV (se procesa en el navegador
+  y muestra cuántos registros son válidos/ inválidos) o usar el dataset de ejemplo.
+- **`nuevo.html` — Cargar registros:** formulario para ingresar check-ins uno por
+  uno (con desplegables de estudiante y contexto). Al terminar podés:
+  - **Descargar CSV** (`registros_emocionales.csv`) para el pipeline o para volver
+    a cargarlo acá,
+  - **Descargar SQL** (`registros.sql`) con los `INSERT INTO registros_emocionales`
+    para **importar en phpMyAdmin** y llenar la base MySQL `faro`,
+  - **Procesar en el panel** directamente.
 - **`panel.html` — Panel:** KPIs por nivel, tabla ordenable con buscador y
   filtros, ficha de cada estudiante (señales + sparkline + historial) y
   **gráficos interactivos**: al tocar una barra o un punto se muestran **los
   datos que lo forman** (y podés abrir la ficha del estudiante).
 
 Todo es responsive y con tema claro/oscuro automático.
+
+> ⚠️ Un sitio estático **no puede** escribir tu archivo CSV ni conectarse a tu
+> MySQL local. Por eso `nuevo.html` **descarga** el CSV y **genera el SQL** para
+> que vos los apliques (reemplazar el CSV / importar en phpMyAdmin).
 
 ---
 

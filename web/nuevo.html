@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FARO · Cargar registros</title>
+<link rel="stylesheet" href="estilos.css">
+<style>
+  .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;align-items:end}
+  .campo label{display:block;font-size:.82rem;color:var(--tinta2);margin-bottom:4px}
+  .campo input,.campo select{width:100%}
+  .acciones{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .rango{display:flex;align-items:center;gap:8px}
+  .rango input[type=range]{flex:1}
+  .val{min-width:44px;text-align:right;font-weight:700}
+</style>
+</head>
+<body>
+<header class="top">
+  <span class="logo">🔦 FARO</span>
+  <span class="sub">Sistema de alerta temprana de bienestar estudiantil</span>
+  <nav>
+    <a href="index.html">Cargar CSV/URL</a>
+    <a href="nuevo.html" class="activo">Cargar registros</a>
+    <a href="panel.html">Panel</a>
+  </nav>
+</header>
+
+<main>
+  <div class="aviso">⚠️ <strong>Herramienta de apoyo, no de diagnóstico.</strong>
+    Todo se procesa <strong>en tu navegador</strong>: nada se envía a un servidor.</div>
+  <div class="ayuda"><strong>Líneas de ayuda (Uruguay):</strong>
+    Línea Vida (prevención del suicidio, MSP/ASSE): <strong>0800 0767 · *0767</strong>
+    &nbsp;·&nbsp; Emergencias: <strong>911</strong></div>
+
+  <div class="card">
+    <h1>Cargar registros manualmente</h1>
+    <p class="muted">Ingresá los check-ins emocionales uno por uno. Al terminar podés
+      <strong>descargar el CSV</strong> (para el pipeline), <strong>descargar el SQL</strong>
+      (para importar en phpMyAdmin y llenar MySQL) o <strong>procesar directo</strong> en el panel.</p>
+  </div>
+
+  <div class="card">
+    <h2>Punto de partida (opcional)</h2>
+    <p class="muted">Si ya tenés un CSV, cargalo para <strong>agregar</strong> registros arriba de esos
+      (y continuar la numeración). Si no, empezás de cero.</p>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Cargar CSV existente</label>
+        <input type="file" id="csvBase" accept=".csv">
+      </div>
+      <div class="campo">
+        <label>Próximo id_registro</label>
+        <input type="number" id="proximoId" value="1" min="1">
+      </div>
+      <div class="campo">
+        <span class="muted" id="infoBase">Sin CSV base: 0 registros previos.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Nuevo registro</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Estudiante</label>
+        <select id="fEstudiante"></select>
+      </div>
+      <div class="campo">
+        <label>Contexto</label>
+        <select id="fContexto"></select>
+      </div>
+      <div class="campo">
+        <label>Fecha y hora</label>
+        <input type="datetime-local" id="fFecha">
+      </div>
+    </div>
+    <div class="form-grid" style="margin-top:14px">
+      <div class="campo">
+        <label>Valencia (−1 desagradable … +1 agradable): <span class="val" id="vVal">0.00</span></label>
+        <div class="rango"><input type="range" id="fValencia" min="-1" max="1" step="0.01" value="0"></div>
+      </div>
+      <div class="campo">
+        <label>Activación (−1 baja … +1 alta): <span class="val" id="vAct">0.00</span></label>
+        <div class="rango"><input type="range" id="fActivacion" min="-1" max="1" step="0.01" value="0"></div>
+      </div>
+      <div class="campo">
+        <label>Comentario (opcional)</label>
+        <input type="text" id="fComentario" placeholder="Ej: Se lo notó retraído en clase.">
+      </div>
+    </div>
+    <div class="acciones">
+      <button class="btn" id="btnAgregar">＋ Agregar registro</button>
+      <span class="muted" id="msg"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Registros cargados (<span id="cuenta">0</span>)</h2>
+    <div style="max-height:340px;overflow:auto">
+      <table>
+        <thead><tr><th>id</th><th>Estudiante</th><th>Contexto</th><th>Fecha</th>
+          <th>Val.</th><th>Act.</th><th>Comentario</th><th></th></tr></thead>
+        <tbody id="cuerpo"></tbody>
+      </table>
+    </div>
+    <div class="acciones">
+      <button class="btn" id="btnCSV">⬇ Descargar CSV</button>
+      <button class="btn sec" id="btnSQL">⬇ Descargar SQL (phpMyAdmin)</button>
+      <button class="btn" id="btnProcesar">Procesar en el panel →</button>
+      <button class="btn sec" id="btnVaciar">Vaciar</button>
+    </div>
+    <p class="muted" id="ayudaSQL" style="margin-top:10px">
+      El SQL trae los <code>INSERT INTO registros_emocionales</code> de los registros nuevos.
+      Importalo en phpMyAdmin (base <code>faro</code>) para llenar MySQL.
+    </p>
+  </div>
+</main>
+
+<footer>FARO · datos sintéticos de ejemplo · el uso real requiere consentimiento y marco institucional.</footer>
+
+<script src="faro_core.js"></script>
+<script src="datos_faro.js"></script>
+<script>
+  var COLS = ["id_registro","id_estudiante","id_contexto","fecha_hora","valencia","activacion","comentario"];
+  var estado = { base: [], nuevos: [] };
+  var ref = window.FARO_REF || { estudiantes: [], contextos: [] };
+  var estById = {}, ctxById = {};
+  ref.estudiantes.forEach(function(e){ estById[e.id_estudiante]=e; });
+  (ref.contextos||[]).forEach(function(c){ ctxById[c.id_contexto]=c; });
+
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ var d=document.createElement("div"); d.textContent=s==null?"":s; return d.innerHTML; }
+
+  // Poblar selects
+  $("fEstudiante").innerHTML = ref.estudiantes.map(function(e){
+    return '<option value="'+e.id_estudiante+'">'+esc(e.nombre)+' — '+esc(e.grupo||"")+'</option>';
+  }).join("");
+  $("fContexto").innerHTML = (ref.contextos||[]).map(function(c){
+    return '<option value="'+c.id_contexto+'">'+esc(c.situacion||("Contexto "+c.id_contexto))+'</option>';
+  }).join("");
+
+  // Fecha por defecto: ahora
+  (function(){
+    var d=new Date(); function p(n){return (n<10?"0":"")+n;}
+    $("fFecha").value = d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate())+"T"+p(d.getHours())+":"+p(d.getMinutes());
+  })();
+
+  // Sliders
+  $("fValencia").oninput = function(){ $("vVal").textContent = (+this.value).toFixed(2); };
+  $("fActivacion").oninput = function(){ $("vAct").textContent = (+this.value).toFixed(2); };
+
+  // Cargar CSV base
+  $("csvBase").onchange = function(){
+    var f = this.files[0]; if(!f) return;
+    var lec = new FileReader();
+    lec.onload = function(){
+      var filas = FARO.parseCSV(lec.result);
+      estado.base = filas;
+      var maxId = filas.reduce(function(m,r){ var v=parseInt(r.id_registro,10); return (v>m?v:m); }, 0);
+      $("proximoId").value = maxId + 1;
+      $("infoBase").textContent = filas.length + " registros previos cargados. Próximo id: " + (maxId+1) + ".";
+    };
+    lec.readAsText(f, "utf-8");
+  };
+
+  // Agregar
+  $("btnAgregar").onclick = function(){
+    var v = parseFloat($("fValencia").value), a = parseFloat($("fActivacion").value);
+    var fecha = $("fFecha").value.replace("T"," ");
+    if(!fecha){ return aviso("Ingresá una fecha.", true); }
+    var id = parseInt($("proximoId").value,10) || 1;
+    estado.nuevos.push({
+      id_registro:id, id_estudiante:parseInt($("fEstudiante").value,10),
+      id_contexto:parseInt($("fContexto").value,10), fecha_hora:fecha,
+      valencia:v, activacion:a, comentario:$("fComentario").value.trim()
+    });
+    $("proximoId").value = id + 1;
+    $("fComentario").value = "";
+    aviso("Registro agregado (id "+id+").", false);
+    render();
+  };
+  function aviso(t, err){ var m=$("msg"); m.textContent=t; m.style.color = err ? "var(--rojo)" : "var(--verde)"; }
+
+  function render(){
+    $("cuenta").textContent = estado.nuevos.length;
+    $("cuerpo").innerHTML = estado.nuevos.map(function(r,i){
+      var e=estById[r.id_estudiante]||{}, c=ctxById[r.id_contexto]||{};
+      return '<tr><td>'+r.id_registro+'</td><td>'+esc(e.nombre||r.id_estudiante)+'</td>'+
+        '<td>'+esc(c.situacion||r.id_contexto)+'</td><td style="white-space:nowrap">'+esc(r.fecha_hora)+'</td>'+
+        '<td>'+r.valencia.toFixed(2)+'</td><td>'+r.activacion.toFixed(2)+'</td>'+
+        '<td class="muted">'+esc(r.comentario)+'</td>'+
+        '<td><a href="#" data-i="'+i+'" class="quitar" style="color:var(--rojo)">quitar</a></td></tr>';
+    }).join("") || '<tr><td colspan="8" class="muted">Todavía no agregaste registros.</td></tr>';
+    document.querySelectorAll(".quitar").forEach(function(a){
+      a.onclick=function(e){ e.preventDefault(); estado.nuevos.splice(+a.dataset.i,1); render(); };
+    });
+  }
+
+  // Utilidades de exportación
+  function csvCampo(v){
+    var s = String(v==null?"":v);
+    return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
+  }
+  function filaComoObjeto(r){ // normaliza base+nuevos a las 7 columnas
+    return { id_registro:r.id_registro, id_estudiante:r.id_estudiante, id_contexto:r.id_contexto,
+             fecha_hora:r.fecha_hora, valencia:r.valencia, activacion:r.activacion, comentario:r.comentario };
+  }
+  function generarCSV(){
+    var todas = estado.base.map(filaComoObjeto).concat(estado.nuevos.map(filaComoObjeto));
+    var lineas = [COLS.join(",")];
+    todas.forEach(function(r){ lineas.push(COLS.map(function(c){ return csvCampo(r[c]); }).join(",")); });
+    return lineas.join("\n") + "\n";
+  }
+  function generarSQL(){
+    if(!estado.nuevos.length) return "-- No hay registros nuevos para insertar.\n";
+    function sq(v){ return "'"+String(v==null?"":v).replace(/'/g,"''")+"'"; }
+    var l = ["USE faro;",""];
+    estado.nuevos.forEach(function(r){
+      l.push("INSERT INTO registros_emocionales (id_registro,id_estudiante,id_contexto,fecha_hora,valencia,activacion,comentario) VALUES ("+
+        r.id_registro+","+r.id_estudiante+","+r.id_contexto+","+sq(r.fecha_hora)+","+r.valencia+","+r.activacion+","+sq(r.comentario)+");");
+    });
+    return l.join("\n") + "\n";
+  }
+  function descargar(nombre, texto, tipo){
+    var blob = new Blob([texto], {type: tipo});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = nombre;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+  }
+
+  $("btnCSV").onclick = function(){
+    if(!estado.base.length && !estado.nuevos.length) return aviso("No hay registros para exportar.", true);
+    descargar("registros_emocionales.csv", generarCSV(), "text/csv;charset=utf-8");
+  };
+  $("btnSQL").onclick = function(){
+    if(!estado.nuevos.length) return aviso("No hay registros nuevos para el SQL.", true);
+    descargar("registros.sql", generarSQL(), "text/plain;charset=utf-8");
+  };
+  $("btnProcesar").onclick = function(){
+    if(!estado.base.length && !estado.nuevos.length) return aviso("Cargá al menos un registro.", true);
+    var res = FARO.construirResultado(generarCSV(), window.FARO_REF);
+    res.origen = "carga manual (" + estado.nuevos.length + " nuevos)";
+    sessionStorage.setItem("FARO_RESULTADO", JSON.stringify(res));
+    location.href = "panel.html";
+  };
+  $("btnVaciar").onclick = function(){ estado.nuevos = []; render(); aviso("", false); };
+
+  render();
+</script>
+</body>
+</html>
