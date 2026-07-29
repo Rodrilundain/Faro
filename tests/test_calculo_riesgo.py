@@ -57,10 +57,10 @@ def test_pipeline_dataset_de_ejemplo_no_cambia_de_comportamiento():
       df_riesgo = _cargar_riesgo_de_ejemplo()
       assert len(df_riesgo) == 30
 
-    conteo = df_riesgo["nivel_riesgo"].value_counts().to_dict()
-    assert conteo.get("Rojo", 0) == 3
-    assert conteo.get("Naranja", 0) == 1
-    assert conteo.get("Amarillo", 0) == 1
-    assert conteo.get("Verde", 0) == 25
+      conteo = df_riesgo["nivel_riesgo"].value_counts().to_dict()
+      assert conteo.get("Rojo", 0) == 3
+      assert conteo.get("Naranja", 0) == 1
+      assert conteo.get("Amarillo", 0) == 1
+      assert conteo.get("Verde", 0) == 25
 
-    assert df_riesgo["puntaje_riesgo"].max() == 86.7
+      assert df_riesgo["puntaje_riesgo"].max() == 86.7
