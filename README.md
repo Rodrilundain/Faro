@@ -1,181 +1,211 @@
-# 🔦 FARO — Sistema de alerta temprana de bienestar estudiantil
+FARO -- Sistema de alerta temprana de bienestar estudiantil
+=============================================================
 
-FARO es una herramienta pensada para **escuelas y liceos**: procesa los
-registros emocionales (check-ins de estado de ánimo) de los estudiantes y genera
-un **tablero de riesgo** que ayuda a un **psicólogo o asistente social** a
-detectar tempranamente a quiénes conviene acompañar, *antes* de que una
-situación de malestar se agrave.
+FARO es una herramienta pensada para escuelas y liceos: procesa los
+registros emocionales (check-ins de estado de animo) de los estudiantes y genera
+un tablero de riesgo que ayuda a un psicologo o asistente social a
+detectar tempranamente a quienes conviene acompanar, antes de que una
+situacion de malestar se agrave.
 
-> ⚠️ **Herramienta de apoyo, no de diagnóstico.** Prioriza; no decide. Toda
-> intervención es responsabilidad de un profesional humano. Leé
-> [`PROTOCOLO_INTERVENCION.md`](PROTOCOLO_INTERVENCION.md).
+Herramienta de apoyo, no de diagnostico. Prioriza; no decide. Toda
+intervencion es responsabilidad de un profesional humano. Lee
+PROTOCOLO_INTERVENCION.md.
 
-El proyecto tiene **dos implementaciones de la misma lógica**:
+El proyecto tiene dos implementaciones de la misma logica. La primera es un
+pipeline en Python (uso local / analisis, estilo del proyecto de clase):
+sanitacion, procesamiento emocional, riesgo, analisis y visualizaciones, con
+log INFO/ERROR y carga desde MySQL/CSV. La segunda es un sitio web estatico
+(para Netlify) que reescribe esa misma logica en JavaScript para que funcione
+en el navegador, sin backend. Tiene una pagina para cargar datos (subir un
+CSV o usar el ejemplo) y otra para mostrar el panel con graficos interactivos.
 
-1. **Pipeline en Python** (uso local / análisis, estilo del proyecto de clase):
-   sanitación → procesamiento emocional → riesgo → análisis → visualizaciones,
-   con log INFO/ERROR y carga desde MySQL/CSV.
-2. **Sitio web estático** (para Netlify): reescribe esa misma lógica en
-   JavaScript para que funcione **en el navegador, sin backend**. Tiene una
-   página para **cargar datos** (subir un CSV o usar el ejemplo) y otra para
-   **mostrar** el panel con **gráficos interactivos**.
+Nota: el calculo en JS da resultados identicos al de Python (validado: mismos
+niveles y puntajes para los 30 estudiantes del ejemplo, cubierto ahora por
+pruebas automaticas, ver mas abajo).
 
-> El cálculo en JS da resultados idénticos al de Python (validado: mismos niveles
-> y puntajes para los 30 estudiantes del ejemplo).
 
----
+Como funciona el pipeline
+-------------------------
 
-## ¿Cómo funciona? (pipeline)
+CSV de registros, luego Sanitacion, luego Procesamiento emocional, luego
+Calculo de riesgo, luego Analisis, luego Visualizaciones.
 
-```
-CSV de registros → [1] Sanitación → [2] Procesamiento → [3] Riesgo → [4] Análisis → [5] Visualizaciones
-                                          emocional      (por alumno)   (agregados)     (gráficos)
-```
+La sanitacion valida columnas, rangos de valencia y activacion entre -1 y 1,
+fechas y duplicados, y separa registros validos de invalidos.
 
-1. **Sanitación**: valida columnas, rangos de valencia/activación `[-1, 1]`,
-   fechas y duplicados. Separa válidos e inválidos.
-2. **Procesamiento emocional**: calcula `intensidad`, `cuadrante` y
-   `etiqueta_emocional` (modelo circumplejo valencia–activación).
-3. **Cálculo de riesgo**: produce un **puntaje 0–100** y un **nivel de semáforo**
-   (Verde/Amarillo/Naranja/Rojo), **solo con variables emocionales** y de forma
-   **transparente** (guarda las señales que justifican cada alerta).
-4. **Análisis**: resúmenes por nivel y por grupo.
-5. **Visualizaciones**: gráficos.
+El procesamiento emocional calcula intensidad, cuadrante y etiqueta_emocional
+usando el modelo circumplejo valencia-activacion.
 
-- En Python: módulos `sanitacion.py`, `procesamiento_emocional.py`,
-  `calculo_riesgo.py`, `analisis.py`, `visualizaciones.py`, orquestados por
-  `ejecutar_pipeline.py` (log en `resultados.txt`, filtrable con `buscar_resultados.py`).
-- En JavaScript: todo en `web/faro_core.js`.
+El calculo de riesgo produce un puntaje de 0 a 100 y un nivel de semaforo
+(Verde, Amarillo, Naranja, Rojo), solo con variables emocionales y de forma
+transparente: guarda las senales que justifican cada alerta.
 
-📄 Diagrama editable del flujo: [`docs/flujo_faro.drawio`](docs/flujo_faro.drawio)
-(abrilo en <https://app.diagrams.net>).
+El paso de analisis arma resumenes por nivel y por grupo, y el de
+visualizaciones genera los graficos.
 
----
+En Python estos pasos viven en los modulos sanitacion.py,
+procesamiento_emocional.py, calculo_riesgo.py, analisis.py y
+visualizaciones.py, orquestados por ejecutar_pipeline.py (log en
+resultados.txt, filtrable con buscar_resultados.py). En JavaScript todo el
+pipeline esta en web/faro_core.js.
 
-## Modelo de riesgo (solo emocional)
+Diagrama editable del flujo: docs/flujo_faro.drawio (abrilo en
+https://app.diagrams.net).
 
-Para cada estudiante, sobre sus registros recientes (últimos 28 días), combina:
 
-| Factor | Peso | Qué mide |
-|--------|------|----------|
-| Valencia negativa | 0.25 | Qué tan bajo está el ánimo promedio |
-| Apagamiento (cuadrante *Triste*) | 0.25 | Ánimo bajo + baja energía |
-| Proporción de registros negativos | 0.15 | Frecuencia del malestar |
-| Persistencia | 0.15 | Rachas negativas consecutivas |
-| Tendencia | 0.15 | Si viene empeorando en el tiempo |
-| Intensidad negativa | 0.05 | Fuerza de las emociones negativas |
+Modelo de riesgo (solo emocional)
+----------------------------------
 
-Pesos y umbrales: al inicio de `calculo_riesgo.py` (Python) y de `web/faro_core.js` (JS).
+Para cada estudiante, sobre sus registros recientes (ultimos 28 dias), se
+combinan seis factores: valencia negativa (peso 0.25, que tan bajo esta el
+animo promedio), apagamiento o cuadrante Triste (peso 0.25, animo bajo mas
+baja energia), proporcion de registros negativos (peso 0.15, frecuencia del
+malestar), persistencia (peso 0.15, rachas negativas consecutivas), tendencia
+(peso 0.15, si viene empeorando en el tiempo) e intensidad negativa (peso
+0.05, fuerza de las emociones negativas).
 
----
+Los pesos y umbrales viven en config/riesgo_config.json, que es la unica
+fuente de verdad: la lee tanto calculo_riesgo.py (Python) como, embebido en
+datos_faro.js por exportar_sitio.py, web/faro_core.js (JS). Asi ambas
+implementaciones no pueden desincronizarse entre si.
 
-## Cómo usarlo
 
-### Requisitos (solo para la parte Python)
-```bash
+Como usarlo
+-----------
+
+Requisitos (solo para la parte Python):
+
 pip install -r requirements.txt
-```
 
-### A) Generar y publicar el sitio web (Netlify)
-```bash
-# (opcional) regenerar los datos de ejemplo — determinista
+Para generar y publicar el sitio web en Netlify, primero corre (opcional,
+regenera los datos de ejemplo de forma determinista):
+
 python generar_datos_ejemplo.py
 
-# arma la carpeta sitio/ (embebe datos/ y la lógica JS)
+y despues arma la carpeta sitio/ con:
+
 python exportar_sitio.py
-```
-Después:
-- **Arrastrá la carpeta `sitio/`** a <https://app.netlify.com/drop>, o
-- conectá un repositorio en Netlify con **publish directory = `sitio`**.
 
-> El sitio calcula todo en el navegador, así que **no necesita correr el pipeline
-> Python** antes de exportar. Solo usa los CSV de `datos/`.
+Luego arrastra la carpeta sitio/ a https://app.netlify.com/drop, o conecta un
+repositorio en Netlify con publish directory igual a sitio.
 
-**Probar el sitio localmente:** como las dos páginas se comunican por
-`sessionStorage`, conviene servirlo (no abrirlo con `file://`):
-```bash
+Nota: el sitio calcula todo en el navegador, asi que no necesita correr el
+pipeline Python antes de exportar. Solo usa los CSV de datos/ y la config de
+config/riesgo_config.json.
+
+Para probar el sitio localmente conviene servirlo en vez de abrirlo con
+file://, ya que las paginas se comunican por sessionStorage:
+
 cd sitio
 python -m http.server 8000
-# abrí http://localhost:8000
-```
 
-### B) Correr el pipeline en Python (análisis local, opcional)
-```bash
+Para correr el pipeline en Python de forma local (analisis, opcional):
+
 python ejecutar_pipeline.py
-```
-Genera `salida/*.csv`, `graficos/*.png` y el log `resultados.txt`. Si tenés
-MySQL/XAMPP con la base `faro` (ver `faro_schema.sql`), lee las tablas de
-referencia desde ahí; si no, cae automáticamente a los CSV de `datos/`.
 
-Para volcar los registros del CSV dentro de la tabla `registros_emocionales` de
-MySQL (idempotente, se puede correr las veces que quieras):
-```bash
-python cargar_registros_mysql.py
-```
+Esto genera salida/*.csv, graficos/*.png y el log resultados.txt. Si tenes
+MySQL o XAMPP con la base faro (ver faro_schema.sql), lee las tablas de
+referencia desde ahi; si no, cae automaticamente a los CSV de datos/.
 
----
 
-## El sitio web (tres páginas)
+Pruebas automaticas
+--------------------
 
-- **`index.html` — Cargar CSV:** subir tu propio CSV (se procesa en el navegador
-  y muestra cuántos registros son válidos/ inválidos) o usar el dataset de ejemplo.
-- **`nuevo.html` — Cargar registros:** formulario para ingresar check-ins uno por
-  uno (con desplegables de estudiante y contexto). Al terminar podés:
-  - **Descargar CSV** (`registros_emocionales.csv`) para el pipeline o para volver
-    a cargarlo acá,
-  - **Descargar SQL** (`registros.sql`) con los `INSERT INTO registros_emocionales`
-    para **importar en phpMyAdmin** y llenar la base MySQL `faro`,
-  - **Procesar en el panel** directamente.
-- **`panel.html` — Panel:** KPIs por nivel, tabla ordenable con buscador y
-  filtros, ficha de cada estudiante (señales + sparkline + historial) y
-  **gráficos interactivos**: al tocar una barra o un punto se muestran **los
-  datos que lo forman** (y podés abrir la ficha del estudiante).
+El repo incluye pruebas de regresion para los dos motores de riesgo (Python y
+JS), usando el dataset de ejemplo real de datos/ para asegurar que ambas
+implementaciones sigan dando los mismos resultados entre si y a lo largo del
+tiempo. Un workflow de GitHub Actions (.github/workflows/tests.yml) las corre
+automaticamente en cada push y pull request.
 
-Todo es responsive y con tema claro/oscuro automático.
+Para correr las pruebas de Python:
 
-> ⚠️ Un sitio estático **no puede** escribir tu archivo CSV ni conectarse a tu
-> MySQL local. Por eso `nuevo.html` **descarga** el CSV y **genera el SQL** para
-> que vos los apliques (reemplazar el CSV / importar en phpMyAdmin).
+pip install -r requirements.txt -r requirements-dev.txt
+pytest -q
 
----
+Para correr las pruebas de JavaScript (sin dependencias, solo Node):
 
-## Estructura del proyecto
+node tests/test_faro_core.js
 
-```
-FARO/
-├── ejecutar_pipeline.py        # Orquestador de los 5 pasos (Python)
-├── buscar_resultados.py        # Buscador del log (consola)
-├── exportar_sitio.py           # Genera sitio/ para Netlify
-├── generar_datos_ejemplo.py    # Generador determinista de datos
-├── cargar_registros_mysql.py   # Carga el CSV de registros a la tabla MySQL
-├── config.txt · faro_schema.sql · requirements.txt
-├── README.md · PROTOCOLO_INTERVENCION.md
-│
-├── carga_csv.py · carga_base_datos.py       # E/S de datos (Python)
-├── sanitacion.py · procesamiento_emocional.py
-├── calculo_riesgo.py           # ★ Motor de riesgo (Python)
-├── analisis.py · visualizaciones.py
-├── main_*.py                   # Un archivo por paso del pipeline
-│
-├── web/                        # Fuentes del sitio estático
-│   ├── carga.html · panel.html
-│   ├── estilos.css
-│   ├── faro_core.js            # ★ Pipeline completo en JavaScript
-│   └── faro_ui.js              # Interfaz + gráficos interactivos
-│
-├── datos/                      # CSV de entrada (registros, estudiantes, etc.)
-├── salida/ · graficos/         # Generados por el pipeline Python
-├── sitio/                      # Sitio generado → esto se sube a Netlify
-└── docs/                       # Diagrama de flujo (.drawio)
-```
 
----
+El sitio web (tres paginas)
+-----------------------------
 
-## Aviso ético y de datos
+index.html es la pagina para cargar CSV: subis tu propio CSV (se procesa en
+el navegador y muestra cuantos registros son validos e invalidos) o usas el
+dataset de ejemplo.
 
-Los datos incluidos son **sintéticos** y no representan personas reales. Los
-registros emocionales de estudiantes son **datos sensibles de menores**: su uso
-real exige consentimiento, marco institucional y resguardo según la normativa
-vigente. En el sitio web, los datos que subís **se procesan solo en tu navegador**
-y no se envían a ningún servidor. Ver detalles en
-[`PROTOCOLO_INTERVENCION.md`](PROTOCOLO_INTERVENCION.md).
+nuevo.html es la pagina para cargar registros: un formulario para ingresar
+check-ins uno por uno. Al terminar podes descargar el CSV, descargar el SQL
+para importar en phpMyAdmin, o procesar en el panel directamente.
+
+panel.html es el panel: KPIs por nivel, tabla ordenable con buscador y
+filtros (con un boton para limpiarlos y con los filtros reflejados en la URL
+para poder compartir un enlace directo a una vista filtrada), ficha de cada
+estudiante y graficos interactivos donde tocar una barra o un punto muestra
+los datos que lo forman.
+
+Todo es responsivo y con tema claro/oscuro automatico.
+
+Nota: un sitio estatico no puede escribir tu archivo CSV ni conectarse a tu
+MySQL local. Por eso nuevo.html descarga el CSV y genera el SQL para que vos
+los apliques.
+
+
+Seguridad y proteccion de datos
+----------------------------------
+
+Este proyecto procesa datos emocionales de menores, que son datos sensibles.
+Si se llega a usar con datos reales (no sinteticos), recomendamos como minimo
+lo siguiente: cifrado en reposo de cualquier base de datos o archivo que
+contenga registros reales, y cifrado en transito si se monta un backend real;
+seudonimizacion o anonimizacion de los CSV y SQL exportados antes de moverlos
+entre maquinas o de subirlos a cualquier repositorio; control de acceso real
+a la base de datos en vez de depender solo de que la maquina este protegida;
+no versionar datos reales en git; y marco institucional y consentimiento
+antes de cualquier uso real, segun la normativa de proteccion de datos y de
+menores vigente en tu jurisdiccion (ver PROTOCOLO_INTERVENCION.md).
+
+En el sitio web estatico, los datos que subis se procesan solo en tu
+navegador y no se envian a ningun servidor.
+
+
+Estructura del proyecto
+--------------------------
+
+La raiz del proyecto tiene ejecutar_pipeline.py (orquestador de los 5 pasos
+en Python), buscar_resultados.py (buscador del log en consola),
+exportar_sitio.py (genera sitio/ para Netlify), generar_datos_ejemplo.py
+(generador determinista de datos), ademas de config.txt, faro_schema.sql,
+requirements.txt, requirements-dev.txt, README.md, PROTOCOLO_INTERVENCION.md
+y LICENSE.
+
+La carpeta config/ tiene riesgo_config.json, con los pesos y umbrales
+(fuente unica para Python y JS).
+
+Tambien en la raiz estan sanitacion.py, procesamiento_emocional.py,
+calculo_riesgo.py (el motor de riesgo), analisis.py, visualizaciones.py y los
+main_*.py (un archivo por paso del pipeline).
+
+La carpeta web/ tiene las fuentes del sitio estatico: carga.html,
+panel.html, nuevo.html, estilos.css, faro_core.js (el pipeline completo en
+JavaScript) y faro_ui.js (la interfaz y los graficos interactivos).
+
+La carpeta tests/ tiene las pruebas automaticas (pytest y Node), y
+.github/workflows/ tiene el workflow de CI que las corre en cada push y pull
+request.
+
+Por ultimo, datos/ tiene los CSV de entrada (registros, estudiantes, etc.),
+salida/ y graficos/ son generados por el pipeline en Python, sitio/ es el
+sitio generado que se sube a Netlify, y docs/ tiene el diagrama de flujo
+(.drawio).
+
+
+Aviso etico y de datos
+--------------------------
+
+Los datos incluidos son sinteticos y no representan personas reales. Los
+registros emocionales de estudiantes son datos sensibles de menores: su uso
+real exige consentimiento, marco institucional y resguardo segun la
+normativa vigente. En el sitio web, los datos que subis se procesan solo en
+tu navegador y no se envian a ningun servidor. Ver detalles en
+PROTOCOLO_INTERVENCION.md.

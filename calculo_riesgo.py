@@ -1,56 +1,87 @@
 """
-Cálculo de riesgo emocional por estudiante  (MODELO SOLO EMOCIONAL).
+Calculo de riesgo emocional por estudiante  (MODELO SOLO EMOCIONAL).
 
-A partir de los registros ya procesados (valencia, activación, intensidad,
-cuadrante, etiqueta), este módulo resume el estado de cada estudiante y produce
-un puntaje de riesgo de 0 a 100 y un nivel con forma de semáforo.
+A partir de los registros ya procesados (valencia, activacion, intensidad,
+cuadrante, etiqueta), este modulo resume el estado de cada estudiante y produce
+un puntaje de riesgo de 0 a 100 y un nivel con forma de semaforo.
 
 El puntaje es TRANSPARENTE: es una suma ponderada de factores emocionales
-observables, y para cada estudiante se guardan las "señales" en texto que
-explican por qué se le asignó ese nivel. No usa texto libre ni datos externos:
-solo las variables emocionales, como se acordó.
+observables, y para cada estudiante se guardan las "senales" en texto que
+explican por que se le asigno ese nivel. No usa texto libre ni datos externos:
+solo las variables emocionales, como se acordo.
 
   ┌───────────────────────────────────────────────────────────────────────┐
   │  ADVERTENCIA DE USO                                                     │
-  │  Esto NO es un diagnóstico ni una predicción clínica. Es una ayuda de   │
-  │  priorización para que un profesional (psicólogo / asistente social)    │
-  │  decida a quién mirar primero. La decisión y la intervención son        │
+  │  Esto NO es un diagnostico ni una prediccion clinica. Es una ayuda de   │
+  │  priorizacion para que un profesional (psicologo / asistente social)    │
+  │  decida a quien mirar primero. La decision y la intervencion son        │
   │  siempre humanas y profesionales.                                       │
   └───────────────────────────────────────────────────────────────────────┘
 """
 
+import json
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
+# Los pesos y umbrales del modelo viven en config/riesgo_config.json, que
+# tambien lee (embebido por exportar_sitio.py en datos_faro.js) web/faro_core.js.
+# Asi Python y JavaScript comparten una unica fuente de verdad y no pueden
+# desincronizarse entre si.
+_CONFIG_PATH = Path(__file__).resolve().parent / "config" / "riesgo_config.json"
+
+def _cargar_config(ruta=None):
+    """Carga pesos y umbrales desde config/riesgo_config.json.
+
+    Si el archivo no existe o el JSON es invalido, se usan los valores por
+    defecto (los mismos que tenia este modulo antes de externalizar la
+    configuracion), para que el pipeline nunca se rompa por esto.
+    """
+    ruta = ruta or _CONFIG_PATH
+    defecto = {
+        "dias_ventana": 28,
+        "min_registros": 4,
+        "pesos": {
+            "valencia_negativa": 0.25,
+            "prop_negativos": 0.15,
+            "prop_apagamiento": 0.25,
+            "persistencia": 0.15,
+            "tendencia": 0.15,
+            "intensidad_negativa": 0.05,
+        },
+        "umbrales": {"rojo": 70, "naranja": 45, "amarillo": 25},
+    }
+    try:
+        with open(ruta, "r", encoding="utf-8") as f:
+            cfg = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return defecto
+    for clave in ("dias_ventana", "min_registros", "pesos", "umbrales"):
+        if clave in cfg:
+            defecto[clave] = cfg[clave]
+    return defecto
+
+_CONFIG = _cargar_config(_CONFIG_PATH)
+
 # Ventana reciente sobre la que se mira el estado actual del estudiante.
-DIAS_VENTANA = 28
-# Mínimo de registros recientes para poder evaluar con confianza.
-MIN_REGISTROS = 4
-
+DIAS_VENTANA = _CONFIG["dias_ventana"]
+# Minimo de registros recientes para poder evaluar con confianza.
+MIN_REGISTROS = _CONFIG["min_registros"]
 # Pesos de cada factor (suman 1.0). El apagamiento (cuadrante Triste) y la
-# valencia negativa pesan más porque son las señales más asociadas al retiro
+# valencia negativa pesan mas porque son las senales mas asociadas al retiro
 # emocional que interesa detectar temprano.
-PESOS = {
-    "valencia_negativa": 0.25,
-    "prop_negativos": 0.15,
-    "prop_apagamiento": 0.25,
-    "persistencia": 0.15,
-    "tendencia": 0.15,
-    "intensidad_negativa": 0.05,
-}
-
-# Umbrales del semáforo (sobre el puntaje 0-100).
-UMBRAL_ROJO = 70
-UMBRAL_NARANJA = 45
-UMBRAL_AMARILLO = 25
-
+PESOS = _CONFIG["pesos"]
+# Umbrales del semaforo (sobre el puntaje 0-100).
+UMBRAL_ROJO = _CONFIG["umbrales"]["rojo"]
+UMBRAL_NARANJA = _CONFIG["umbrales"]["naranja"]
+UMBRAL_AMARILLO = _CONFIG["umbrales"]["amarillo"]
 
 def _clamp(valor, minimo=0.0, maximo=1.0):
     return max(minimo, min(maximo, valor))
 
-
 def _racha_negativa_maxima(valencias_ordenadas):
-    """Racha máxima de registros consecutivos con valencia negativa."""
+    """Racha maxima de registros consecutivos con valencia negativa."""
     maxima = 0
     actual = 0
     for valencia in valencias_ordenadas:
@@ -61,11 +92,10 @@ def _racha_negativa_maxima(valencias_ordenadas):
             actual = 0
     return maxima
 
-
 def _tendencia_valencia(fechas, valencias):
     """
-    Pendiente de la valencia en el tiempo (unidades de valencia por día).
-    Negativa = el estudiante viene empeorando. Usa regresión lineal simple.
+    Pendiente de la valencia en el tiempo (unidades de valencia por dia).
+    Negativa = el estudiante viene empeorando. Usa regresion lineal simple.
     """
     if len(valencias) < 2:
         return 0.0
@@ -74,7 +104,6 @@ def _tendencia_valencia(fechas, valencias):
         return 0.0
     pendiente = np.polyfit(dias, np.array(valencias, dtype=float), 1)[0]
     return float(pendiente)
-
 
 def _senales(factores, resumen):
     """Traduce los factores altos a frases legibles para el profesional."""
@@ -86,7 +115,7 @@ def _senales(factores, resumen):
     if factores["prop_apagamiento"] >= 0.4:
         senales.append(
             f"{resumen['prop_apagamiento'] * 100:.0f}% de registros de apagamiento "
-            "(baja energía + ánimo bajo, cuadrante Triste)."
+            "(baja energia + animo bajo, cuadrante Triste)."
         )
     if factores["prop_negativos"] >= 0.5:
         senales.append(
@@ -97,13 +126,12 @@ def _senales(factores, resumen):
             f"Racha de {resumen['racha_negativa']} registros negativos seguidos."
         )
     if factores["tendencia"] >= 0.5:
-        senales.append("Tendencia a empeorar en las últimas semanas.")
+        senales.append("Tendencia a empeorar en las ultimas semanas.")
     if factores["intensidad_negativa"] >= 0.6:
         senales.append("Emociones negativas de alta intensidad.")
     if not senales:
-        senales.append("Sin señales emocionales de alerta relevantes.")
+        senales.append("Sin senales emocionales de alerta relevantes.")
     return senales
-
 
 def _evaluar_estudiante(df_estudiante, fecha_referencia):
     """Calcula el resumen y el puntaje de riesgo de un solo estudiante."""
@@ -112,7 +140,7 @@ def _evaluar_estudiante(df_estudiante, fecha_referencia):
     inicio_ventana = fecha_referencia - pd.Timedelta(days=DIAS_VENTANA)
     recientes = df_estudiante[df_estudiante["fecha_hora"] >= inicio_ventana]
 
-    # Si no hay actividad reciente, se evalúa sobre los últimos registros disponibles.
+    # Si no hay actividad reciente, se evalua sobre los ultimos registros disponibles.
     if len(recientes) < MIN_REGISTROS:
         recientes = df_estudiante.tail(MIN_REGISTROS)
 
@@ -138,9 +166,9 @@ def _evaluar_estudiante(df_estudiante, fecha_referencia):
         "valencia_negativa": _clamp((-valencia_prom - 0.2) / 0.8),
         "prop_negativos": _clamp(prop_negativos),
         "prop_apagamiento": _clamp(prop_apagamiento),
-        # 6 o más registros negativos seguidos -> 1
+        # 6 o mas registros negativos seguidos -> 1
         "persistencia": _clamp(racha / 6.0),
-        # una caída proyectada de 0.6 de valencia en la ventana -> 1
+        # una caida proyectada de 0.6 de valencia en la ventana -> 1
         "tendencia": _clamp((-pendiente * DIAS_VENTANA) / 0.6),
         "intensidad_negativa": _clamp(intensidad_neg_prom),
     }
@@ -176,7 +204,6 @@ def _evaluar_estudiante(df_estudiante, fecha_referencia):
     resumen["senales"] = " | ".join(_senales(factores, resumen))
     return resumen
 
-
 def calcular_riesgo(df_procesado):
     """
     Recibe el DataFrame de registros ya procesados y devuelve un DataFrame con
@@ -205,9 +232,10 @@ def calcular_riesgo(df_procesado):
         ["_orden", "puntaje_riesgo"], ascending=[True, False]
     ).drop(columns="_orden")
 
-    # Reordenar columnas: identificación primero.
+    # Reordenar columnas: identificacion primero.
     columnas = ["id_estudiante", "nivel_riesgo", "puntaje_riesgo"] + [
         c for c in df_riesgo.columns
         if c not in ("id_estudiante", "nivel_riesgo", "puntaje_riesgo")
     ]
     return df_riesgo[columnas].reset_index(drop=True)
+

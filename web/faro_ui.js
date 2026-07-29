@@ -41,6 +41,22 @@
     $("buscar").oninput = function (e) { estado.texto = e.target.value.toLowerCase(); render(); };
     selG.onchange = function (e) { estado.grupo = e.target.value; render(); };
     $("filtroNivel").onchange = function (e) { estado.nivel = e.target.value; render(); };
+var limpiarBtn = $("limpiarFiltros");
+    if (limpiarBtn) {
+      limpiarBtn.onclick = function () {
+        estado.nivel = ""; estado.grupo = ""; estado.texto = "";
+        $("buscar").value = ""; selG.value = ""; $("filtroNivel").value = "";
+        render();
+      };
+    }
+    // Restaurar filtros desde la URL (para poder compartir un enlace con filtros aplicados).
+    var parametrosURL = new URLSearchParams(window.location.search);
+    if (parametrosURL.get("nivel")) estado.nivel = parametrosURL.get("nivel");
+    if (parametrosURL.get("grupo")) estado.grupo = parametrosURL.get("grupo");
+    if (parametrosURL.get("q")) estado.texto = parametrosURL.get("q").toLowerCase();
+    $("buscar").value = parametrosURL.get("q") || "";
+    selG.value = estado.grupo;
+    $("filtroNivel").value = estado.nivel;
     document.querySelectorAll("th[data-col]").forEach(function (th) {
       th.onclick = function () {
         var c = th.dataset.col;
@@ -87,7 +103,17 @@
       return estado.asc ? (va - vb) : (vb - va);
     });
   }
-
+function actualizarURL() {
+  if (!window.history || !window.history.replaceState) return;
+  var params = new URLSearchParams();
+  if (estado.nivel) params.set("nivel", estado.nivel);
+  if (estado.grupo) params.set("grupo", estado.grupo);
+  if (estado.texto) params.set("q", estado.texto);
+  var qs = params.toString();
+  var url = window.location.pathname + (qs ? "?" + qs : "");
+  window.history.replaceState(null, "", url);
+}
+  
   function render() {
     pintarKpis();
     var filas = filtrar();
@@ -106,6 +132,7 @@
     document.querySelectorAll("#cuerpoTabla tr[data-id]").forEach(function (tr) {
       tr.onclick = function () { abrirFicha(+tr.dataset.id); };
     });
+  actualizarURL();
   }
 
   // ================= FICHA =================

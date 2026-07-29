@@ -1,0 +1,18 @@
+{
+    "_comentario": "Pesos y umbrales del modelo de riesgo. Este archivo es la unica fuente de verdad: lo lee calculo_riesgo.py (Python) directamente, y web/faro_core.js (JS) lo recibe embebido como window.FARO_CONFIG via exportar_sitio.py. Los pesos deben sumar 1.0.",
+    "dias_ventana": 28,
+    "min_registros": 4,
+    "pesos": {
+          "valencia_negativa": 0.25,
+          "prop_negativos": 0.15,
+          "prop_apagamiento": 0.25,
+          "persistencia": 0.15,
+          "tendencia": 0.15,
+          "intensidad_negativa": 0.05
+    },
+    "umbrales": {
+          "rojo": 70,
+          "naranja": 45,
+          "amarillo": 25
+    }
+}
