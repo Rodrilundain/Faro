@@ -178,14 +178,14 @@ def _evaluar_estudiante(df_estudiante, fecha_referencia):
 
     datos_suficientes = len(df_estudiante) >= MIN_REGISTROS
     if not datos_suficientes:
-        nivel = "Sin datos suficientes"
-elif puntaje >= UMBRAL_ROJO:
-        nivel = "Rojo"
+            nivel = "Sin datos suficientes"
+    elif puntaje >= UMBRAL_ROJO:
+                nivel = "Rojo"
 elif puntaje >= UMBRAL_NARANJA:
-        nivel = "Naranja"
-elif puntaje >= UMBRAL_AMARILLO:
+            nivel = "Naranja"
+    elif puntaje >= UMBRAL_AMARILLO:
         nivel = "Amarillo"
-else:
+    else:
         nivel = "Verde"
 
     resumen = {
