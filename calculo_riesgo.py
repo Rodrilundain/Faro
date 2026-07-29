@@ -176,13 +176,13 @@ def _evaluar_estudiante(df_estudiante, fecha_referencia):
     puntaje = sum(PESOS[k] * factores[k] for k in PESOS) * 100
     puntaje = round(puntaje, 1)
 
-    datos_suficientes = len(df_estudiante) >= MIN_REGISTROS
+        datos_suficientes = len(df_estudiante) >= MIN_REGISTROS
     if not datos_suficientes:
-            nivel = "Sin datos suficientes"
+        nivel = "Sin datos suficientes"
     elif puntaje >= UMBRAL_ROJO:
-                nivel = "Rojo"
-elif puntaje >= UMBRAL_NARANJA:
-            nivel = "Naranja"
+        nivel = "Rojo"
+    elif puntaje >= UMBRAL_NARANJA:
+        nivel = "Naranja"
     elif puntaje >= UMBRAL_AMARILLO:
         nivel = "Amarillo"
     else:
